@@ -115,6 +115,11 @@ body.filtering .card.lit{opacity:1;transform:translateY(-4px);box-shadow:0 0 0 4
 .job-body{max-height:0;overflow:hidden;transition:max-height .55s ease}
 .job-body-in{padding:2px 26px 22px 32px}
 .job-logo{float:right;width:118px;height:118px;border-radius:50%;border:3px solid var(--gold);margin:2px 0 10px 16px;object-fit:cover;box-shadow:4px 4px 0 rgba(11,43,51,.25)}
+.job-brand{float:right;background:#fff;border:3px solid var(--gold);border-radius:16px;padding:10px 16px;margin:2px 0 12px 18px;box-shadow:4px 4px 0 rgba(11,43,51,.22);line-height:0}
+.job-brand img{display:block;height:72px;width:auto;max-width:248px;object-fit:contain}
+.job-brand.dark{background:var(--navy);border-color:var(--turq)}
+.foot-logo{width:104px;height:104px;object-fit:contain;display:block;margin:0 auto 14px;filter:drop-shadow(0 0 14px rgba(31,182,166,.45))}
+.gal figure.full img{object-fit:contain;background:var(--navy)}
 .job-body p{font-size:.99rem;max-width:88ch}
 .job-body p+p{margin-top:9px}
 body.filtering .job{opacity:.3}
@@ -132,6 +137,7 @@ body.filtering .job.lit{opacity:1;box-shadow:0 0 0 4px var(--mustard),0 0 30px r
   .shot{margin-top:-70px}
   .shot img{width:160px;height:200px}
   .gal{grid-template-columns:repeat(2,1fr)}
+  .job-brand{float:none;display:inline-block;margin:0 0 14px 0}
   .job-head .meta{display:none}
   .hero-img{height:210px}
 }
@@ -265,7 +271,7 @@ body.filtering .job.lit{opacity:1;box-shadow:0 0 0 4px var(--mustard),0 0 30px r
       <figure><img src="img/art-eye.jpg" alt="Stone pyramid with a great eye beneath a ringed planet"><figcaption>The Watching Pyramid · Hexagonal acrylic</figcaption></figure>
       <figure class="wide"><img src="img/art-ufo.jpg" alt="Crashed flying saucer in a desert canyon watched by a black dog"><figcaption>Crash Site · Hexagonal acrylic</figcaption></figure>
       <figure class="wide"><img src="img/art-sf.jpg" alt="Vintage mid-century painting of the San Francisco Bay Bridge and a cable car at night"><figcaption>San Francisco Nocturne · From the studio wall</figcaption></figure>
-      <figure class="tall"><img src="img/art-sign.jpg" alt="Hand-painted Palm Springs sign blazing against orange and purple rays"><figcaption>Palm Springs Sign · Original painting</figcaption></figure>
+      <figure class="tall full"><img src="img/art-sign.jpg" alt="Hand-painted Palm Springs sign blazing against orange and purple rays"><figcaption>Palm Springs Sign · Original painting</figcaption></figure>
       <figure><img src="img/art-aerial.jpg" alt="Aerial view of twin turquoise pools with magenta loungers"><figcaption>Two Pools · Palm Springs series</figcaption></figure>
       <figure><img src="img/art-split.jpg" alt="Palms rising between chartreuse daylight and magenta desert night"><figcaption>Day / Night Palms · Palm Springs series</figcaption></figure>
     </div>
@@ -284,6 +290,7 @@ body.filtering .job.lit{opacity:1;box-shadow:0 0 0 4px var(--mustard),0 0 30px r
     <article class="job" id="j1" style="--c:#F0A818" data-skills="python sql saas data excel word docs pdf proof web html css js design branding present ops customer">
       <button class="job-head" type="button"><span class="jt"><h3>Founder &amp; Owner</h3><span class="org">Dude in the Desert Studios LLC · Palm Springs, CA</span></span><span class="meta">Jan 2024 — Present</span><span class="plus">+</span></button>
       <div class="job-body"><div class="job-body-in">
+        <span class="job-brand dark"><img src="img/logo-studios.png" alt="Dude in the Desert Studio neon logo" width="72" height="72"></span>
         <p>Run a creative technology studio end to end: art sales and commissions, website design, graphic design, app development, coding, and AI scripting. Every job in the building is mine, from client intake and quoting to production, delivery, and follow-up, and every system behind it is one I chose, learned, and maintain myself.</p>
         <p>Recent builds include a 158-page interactive book produced to print standard, hand-coded interactive websites in HTML, CSS, and JavaScript, and a live Python service that bridges a streaming platform to connected devices in real time. Day to day the work runs on SQL queries, SaaS tooling, spreadsheets, and document production, the same toolkit I bring to operations and support roles.</p>
         <div class="tags"></div>
@@ -302,6 +309,7 @@ body.filtering .job.lit{opacity:1;box-shadow:0 0 0 4px var(--mustard),0 0 30px r
     <article class="job" id="j3" style="--c:#0E7C6F" data-skills="word excel docs proof pdf sql saas data ops customer">
       <button class="job-head" type="button"><span class="jt"><h3>Workflow Coordinator / Legal Document Specialist</h3><span class="org">Integreon Managed Solutions · Fargo, ND</span></span><span class="meta">Mar 2020 — Dec 2023</span><span class="plus">+</span></button>
       <div class="job-body"><div class="job-body-in">
+        <span class="job-brand"><img src="img/logo-integreon.jpg" alt="Integreon logo" width="130" height="72"></span>
         <p>Coordinated legal document production for a national Am Law 100 firm (client name confidential per contract) as the operational hub of a high-volume workflow: intake and triage of requests, assignment to specialists, deadline tracking, quality control, and final delivery. When volume spiked or a deadline slipped, the queue came to me.</p>
         <p>Received intensive Microsoft Suite training and worked to mastery in Word, Excel, and Outlook: complex document formatting, styles, tables of contents and authorities, redlines, and PDF production at law-firm standard. The role ran on SaaS workflow platforms and internal databases, with SQL-driven lookups and data checks woven into daily quality control, and constant, professional client-facing communication throughout.</p>
         <div class="tags"></div>
@@ -311,6 +319,7 @@ body.filtering .job.lit{opacity:1;box-shadow:0 0 0 4px var(--mustard),0 0 30px r
     <article class="job" id="j4" style="--c:#B7D62E" data-skills="ops data excel extraction">
       <button class="job-head" type="button"><span class="jt"><h3>Grower, Trimmer &amp; Processor</h3><span class="org">Roden Farms · Casselton, ND</span></span><span class="meta">May 2021 — Dec 2023 · Concurrent</span><span class="plus">+</span></button>
       <div class="job-body"><div class="job-body-in">
+        <span class="job-brand"><img src="img/logo-roden.png" alt="Roden Farms logo, Casselton, North Dakota" width="76" height="72"></span>
         <p>Hands-on cannabis production from cultivation to finished product: growing, trimming, and processing, including THC and CBD extraction and pollination work to bioengineer different species. Operations ran on tracked data: yields, batch records, and inventory logged and reconciled in spreadsheets, inside a legal compliance framework where documentation errors have real consequences.</p>
         <div class="tags"></div>
       </div></div>
@@ -319,6 +328,7 @@ body.filtering .job.lit{opacity:1;box-shadow:0 0 0 4px var(--mustard),0 0 30px r
     <article class="job" id="j5" style="--c:#1FB6A6" data-skills="ops customer excel data saas nightaudit frontdesk">
       <button class="job-head" type="button"><span class="jt"><h3>Night Auditor</h3><span class="org">AmericInn Lodge &amp; Suites · Wahpeton, ND</span></span><span class="meta">Oct 2019 — Mar 2020</span><span class="plus">+</span></button>
       <div class="job-body"><div class="job-body-in">
+        <span class="job-brand"><img src="img/logo-americinn.jpg" alt="AmericInn Lodge and Suites logo" width="97" height="72"></span>
         <p>Sole overnight operator of the hotel: front desk, guest services, security walks, and the nightly audit. Balanced the day's books, reconciled charges and payments in the property system, ran occupancy and revenue reports, and closed out discrepancies before the morning team arrived. Guests at 3 AM get the same patience as guests at 3 PM; that is the job.</p>
         <div class="tags"></div>
       </div></div>
@@ -327,6 +337,7 @@ body.filtering .job.lit{opacity:1;box-shadow:0 0 0 4px var(--mustard),0 0 30px r
     <article class="job" id="j6" style="--c:#D95D27" data-skills="ops customer excel data saas design present events distribution">
       <button class="job-head" type="button"><span class="jt"><h3>Distribution Manager &amp; Event Coordinator</h3><span class="org">Kosmic Kombucha · Austin, TX</span></span><span class="meta">Mar 2018 — Sep 2019</span><span class="plus">+</span></button>
       <div class="job-body"><div class="job-body-in">
+        <span class="job-brand"><img src="img/logo-kosmic.jpg" alt="Kosmic Kombucha logo" width="121" height="72"></span>
         <p>Ran distribution for a growing beverage brand: routing, inventory, and account orders tracked through ordering platforms and spreadsheets, with delivery problems solved before accounts ever felt them. In parallel, coordinated brand events end to end: planning, staffing, presentation materials, and on-site execution, representing the brand to retailers and the public.</p>
         <div class="tags"></div>
       </div></div>
@@ -335,6 +346,7 @@ body.filtering .job.lit{opacity:1;box-shadow:0 0 0 4px var(--mustard),0 0 30px r
     <article class="job" id="j7" style="--c:#14313A" data-skills="saas sql data excel customer ops present">
       <button class="job-head" type="button"><span class="jt"><h3>Account Manager</h3><span class="org">Luxe Valet · Austin, TX</span></span><span class="meta">Sep 2015 — Mar 2018</span><span class="plus">+</span></button>
       <div class="job-body"><div class="job-body-in">
+        <span class="job-brand"><img src="img/logo-luxe.jpg" alt="Luxe logo" width="72" height="72"></span>
         <p>Account Manager for a valet parking services company, serving as the primary point of contact between venue clients and operations teams. Owned a book of client accounts end to end: onboarding, scheduling, service quality, issue resolution, and retention. The operation ran on a SaaS platform, and my days lived in its data: account records, SQL-based reporting, billing checks, and performance reviews presented back to clients and leadership.</p>
         <div class="tags"></div>
       </div></div>
@@ -343,6 +355,7 @@ body.filtering .job.lit{opacity:1;box-shadow:0 0 0 4px var(--mustard),0 0 30px r
     <article class="job" id="j8" style="--c:#E5447C" data-skills="customer ops bartend">
       <button class="job-head" type="button"><span class="jt"><h3>Lead Bartender &amp; Headwaiter</h3><span class="org">Gringo's Tex-Mex Kitchen and Cantina · Texas City, TX</span></span><span class="meta">Aug 2012 — Aug 2015</span><span class="plus">+</span></button>
       <div class="job-body"><div class="job-body-in">
+        <span class="job-brand"><img src="img/logo-gringos.png" alt="Gringo's Tex-Mex logo" width="118" height="72"></span>
         <p>Dual leadership role in a high-volume restaurant: lead bartender running the bar program and headwaiter leading the dining room service team, at the same time, on the same shifts. Trained and directed service staff, handled cash and close-out, resolved guest issues on the floor, and kept a packed house moving without ever letting it feel rushed.</p>
         <div class="tags"></div>
       </div></div>
@@ -377,6 +390,7 @@ body.filtering .job.lit{opacity:1;box-shadow:0 0 0 4px var(--mustard),0 0 30px r
   <img class="foot-art" src="img/art-aerial.jpg" alt="Aerial view of turquoise pools and palms">
   <div class="foot-band">
     <div class="wrap">
+      <img class="foot-logo" src="img/logo-studios.png" alt="Dude in the Desert Studio neon logo" width="104" height="104">
       <div class="big">Let’s build the next thing.</div>
       <p style="margin-top:10px">Dude Bartlett · Palm Springs, California · <a href="mailto:dude.bartlett.g@gmail.com">dude.bartlett.g@gmail.com</a> · (619) 369-5432</p>
       <p style="margin-top:8px"><a href="https://www.linkedin.com/in/dude-bartlett/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/dudebartlett" target="_blank" rel="noopener">GitHub</a> · <a href="print.html">(Print Copy of Resume here)</a> · dudebartlett.github.io</p>
