@@ -6,49 +6,71 @@
 <title>Dude Bartlett — Resume (Print)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Jost:wght@300;400;500;600&family=Marcellus&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Limelight&family=Jost:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Marcellus&display=swap" rel="stylesheet">
 <style>
-:root{--teal:#17645F;--teal-deep:#0F4A46;--turq:#2A9D8F;--coral:#E76F51;--mustard:#E9C46A;--ink:#22343A;--soft:#43555C;--sand:#F6EDDA}
+:root{
+  --navy:#0B2B33; --deep:#071E25; --teal:#0E7C6F; --turq:#1FB6A6;
+  --mustard:#F0A818; --lime:#B7D62E; --pink:#C22A5E; --coral:#C24E1F;
+  --cream:#FAF0DA; --sand:#F1DFBB; --ink:#14313A; --soft:#3D565F;
+}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Jost',sans-serif;color:var(--ink);background:#E9DFC8}
-.sheet{background:#FFFDF6;max-width:8.5in;margin:22px auto;padding:.5in .6in .45in;border:2.5px solid var(--teal-deep);
-  box-shadow:10px 10px 0 rgba(23,100,95,.18);-webkit-print-color-adjust:exact;print-color-adjust:exact;position:relative}
-.sheet:before,.sheet:after{content:"";position:absolute;width:54px;height:54px;border:3px solid var(--mustard);pointer-events:none}
-.sheet:before{top:10px;left:10px;border-right:none;border-bottom:none}
-.sheet:after{bottom:10px;right:10px;border-left:none;border-top:none}
-h1{font-family:'Poiret One',cursive;font-weight:400;font-size:31pt;color:var(--teal-deep);letter-spacing:.05em;line-height:1}
-h1 .accent{color:var(--coral)}
-.headline{font-weight:600;font-size:10.5pt;color:var(--teal);margin-top:5px;letter-spacing:.02em}
-.contact{font-size:9.5pt;color:var(--soft);margin-top:4px}
-.contact b{color:var(--ink)}
-.rule{height:3px;margin:10px 0 8px;background:repeating-linear-gradient(90deg,var(--mustard) 0 26px,transparent 26px 40px)}
-h2{font-family:'Marcellus',serif;font-size:10pt;letter-spacing:.3em;text-transform:uppercase;color:var(--coral);margin:11px 0 5px}
-p,li{font-size:9.6pt;line-height:1.42}
+body{font-family:'Jost',sans-serif;color:var(--ink);background:var(--deep)}
+.screenbar{max-width:8.5in;margin:16px auto 4px;text-align:center}
+.screenbar button{background:var(--mustard);color:var(--navy);border:none;font-family:'Marcellus',serif;letter-spacing:.12em;padding:12px 28px;border-radius:999px;cursor:pointer;font-size:.95rem;font-weight:700}
+.screenbar button:hover{background:var(--pink);color:#fff}
+.screenbar a{color:var(--turq);margin-left:16px;font-size:.95rem}
+.sheet{
+  width:8.5in;height:11in;margin:14px auto 26px;padding:.27in .44in .22in;position:relative;overflow:hidden;
+  background-color:var(--cream);
+  background-image:linear-gradient(rgba(250,240,218,.865),rgba(250,240,218,.925)),url(img/art-split.jpg);
+  background-size:cover;background-position:center 38%;
+  box-shadow:0 14px 44px rgba(0,0,0,.5);
+  -webkit-print-color-adjust:exact;print-color-adjust:exact;
+}
+/* ---------- HEADER BAND ---------- */
+.band{background:var(--navy);color:var(--cream);padding:11px 20px 9px;border-bottom:5px solid var(--mustard);position:relative}
+.band .burst{position:absolute;right:14px;top:10px;width:52px;height:52px}
+.eyebrow{font-family:'Marcellus',serif;letter-spacing:.42em;text-transform:uppercase;font-size:7.2pt;color:var(--lime)}
+h1{font-family:'Limelight',cursive;font-weight:400;font-size:28pt;line-height:1.04;color:var(--cream);text-shadow:3px 3px 0 var(--teal);letter-spacing:.03em;margin-top:2px}
+.tagline{font-size:10pt;font-weight:500;color:var(--sand);margin-top:3px}
+.tagline b{color:var(--mustard);font-weight:700}
+.contacts{font-size:8.4pt;color:var(--cream);margin-top:6px;letter-spacing:.02em}
+.contacts b{color:var(--turq)}
+/* ---------- SECTIONS ---------- */
+.sec{display:flex;align-items:center;gap:10px;margin:5px 0 2px}
+.sec .burst{width:19px;height:19px;flex:0 0 auto}
+.sec h2{font-family:'Limelight',cursive;font-weight:400;font-size:12pt;letter-spacing:.05em;color:var(--navy);white-space:nowrap}
+.sec .rule{flex:1;height:3.5px;border-radius:2px;background:repeating-linear-gradient(90deg,var(--mustard) 0 24px,var(--teal) 24px 48px,var(--pink) 48px 72px)}
+p,li{font-size:8.1pt;line-height:1.27}
 .summary{color:var(--soft)}
-.skills{font-size:9.6pt;line-height:1.5;color:var(--ink)}
-.skills b{color:var(--teal-deep)}
-.job{margin-bottom:6.5px}
-.job .top{display:flex;baseline:baseline;justify-content:space-between;gap:10px}
-.job .role{font-weight:600;font-size:10.3pt;color:var(--teal-deep)}
-.job .org{color:var(--coral);font-weight:600}
-.job .when{font-family:'Marcellus',serif;font-size:8.4pt;letter-spacing:.08em;color:var(--teal);white-space:nowrap}
+.skills{font-size:8.1pt;line-height:1.30}
+.skills b{color:var(--teal)}
+/* ---------- JOBS ---------- */
+.job{margin-bottom:2.5px}
+.job .top{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.job .role{font-weight:700;font-size:9.1pt;color:var(--navy)}
+.job .org{font-weight:600;color:var(--oc,var(--teal))}
+.job .when{font-family:'Marcellus',serif;font-size:7.3pt;letter-spacing:.09em;color:#5d737b;white-space:nowrap;text-transform:uppercase}
 .job p{color:var(--soft)}
-.edu{display:flex;gap:26px}
+/* ---------- PROJECTS / EDUCATION ---------- */
+.projects b{color:var(--navy)}
+.edu{display:flex;gap:22px}
 .edu div{flex:1}
-.edu .role{font-weight:600;color:var(--teal-deep);font-size:10pt}
+.edu .role{font-weight:700;color:var(--navy);font-size:9.3pt}
 .edu p{color:var(--soft)}
-.foot{margin-top:10px;padding-top:7px;border-top:2px solid var(--mustard);display:flex;justify-content:space-between;font-size:8.6pt;color:var(--soft)}
-.foot b{color:var(--teal-deep)}
-.screenbar{max-width:8.5in;margin:16px auto 0;text-align:center;font-family:'Jost',sans-serif}
-.screenbar button{background:var(--teal);color:#FCF7EA;border:none;font-family:'Marcellus',serif;letter-spacing:.12em;
-  padding:12px 28px;border-radius:999px;cursor:pointer;font-size:.95rem}
-.screenbar button:hover{background:var(--coral)}
-.screenbar a{color:var(--teal-deep);margin-left:16px}
-@page{size:letter;margin:.4in}
+/* ---------- FOOTER ---------- */
+.foot{margin-top:6px;border-top:3.5px solid var(--mustard);padding-top:7px;display:flex;justify-content:space-between;align-items:center;gap:18px}
+.foot .big{font-family:'Limelight',cursive;font-size:11.5pt;color:var(--navy)}
+.foot .url{font-weight:700;color:var(--teal);font-size:9.6pt}
+.foot p{color:var(--soft);font-size:8.6pt;max-width:5.6in}
+.qrbox{text-align:center;flex:0 0 auto}
+.qrbox img{width:.8in;height:.8in;display:block;background:var(--cream);border:2.5px solid var(--navy);outline:2px solid var(--mustard);padding:3px}
+.qrbox .cap{font-family:'Marcellus',serif;font-size:6.8pt;letter-spacing:.14em;text-transform:uppercase;color:var(--navy);margin-top:3px}
+@page{size:letter;margin:0}
 @media print{
   body{background:#fff}
-  .sheet{margin:0;box-shadow:none;border-width:2px;max-width:none;padding:.15in .25in}
   .screenbar{display:none}
+  .sheet{margin:0;box-shadow:none}
 }
 </style>
 </head>
@@ -59,55 +81,76 @@ p,li{font-size:9.6pt;line-height:1.42}
 </div>
 
 <div class="sheet">
-  <h1>DUDE <span class="accent">BARTLETT</span></h1>
-  <p class="headline">Operations &amp; Workflow Coordination &#10038; SaaS Account Management &#10038; Legal Document Production &#10038; Customer Support &#10038; Creative Technology</p>
-  <p class="contact"><b>Palm Springs, CA</b> &middot; dude.bartlett.g@gmail.com &middot; (619) 369-5432 &middot; linkedin.com/in/dude-bartlett &middot; upwork.com/freelancers/dudeb3</p>
-  <div class="rule"></div>
+  <!-- ================= HEADER ================= -->
+  <header class="band">
+    <svg class="burst" viewBox="0 0 100 100" aria-hidden="true"><g fill="#F0A818"><path d="M50 0 L56 38 L95 20 L62 46 L100 50 L62 54 L95 80 L56 62 L50 100 L44 62 L5 80 L38 54 L0 50 L38 46 L5 20 L44 38Z"/></g></svg>
+    <div class="eyebrow">Palm Springs · California</div>
+    <h1>DUDE BARTLETT</h1>
+    <p class="tagline">Operations · SaaS Account Management · Workflow Coordination · Customer Support · <b>Creative Technology</b></p>
+    <p class="contacts"><b>dude.bartlett.g@gmail.com</b> &nbsp;·&nbsp; (619) 369-5432 &nbsp;·&nbsp; linkedin.com/in/dude-bartlett &nbsp;·&nbsp; upwork.com/freelancers/dudeb3</p>
+  </header>
 
-  <p class="summary">Operations professional with fourteen years across legal services, SaaS account management, hospitality, distribution, and creative technology. Coordinated high-volume legal document workflows for a national Am Law 100 firm, managed client accounts on SaaS platforms with SQL reporting, ran a hotel's overnight audit solo, and now runs two Palm Springs businesses. Deep Microsoft Office mastery. The person you call when the queue is deep, the deadline is real, and it has to be right.</p>
+  <!-- ================= SUMMARY ================= -->
+  <div class="sec"><svg class="burst" viewBox="0 0 100 100" aria-hidden="true"><g fill="#0E7C6F"><path d="M50 0 L56 38 L95 20 L62 46 L100 50 L62 54 L95 80 L56 62 L50 100 L44 62 L5 80 L38 54 L0 50 L38 46 L5 20 L44 38Z"/></g></svg><h2>The Short Version</h2><div class="rule"></div></div>
+  <p class="summary">Operations professional with fourteen years across legal services, SaaS account management, hospitality, distribution, and creative technology: coordinated high-volume legal document workflows for a national Am Law 100 firm, managed client accounts on SaaS platforms with SQL reporting, ran a hotel's overnight audit solo, and now runs two Palm Springs businesses, with deep Microsoft Office mastery throughout. The person you call when the queue is deep, the deadline is real, and it has to be right.</p>
 
-  <h2>Core Skills</h2>
-  <p class="skills"><b>Documents &amp; Data:</b> Microsoft Word, Excel, PowerPoint, Outlook &middot; Document Formatting &middot; Proofreading &middot; PDF Conversion &middot; SQL &middot; Data Analysis &amp; Cleaning &middot; Presentation Design<br>
-  <b>Technology:</b> Python &middot; SaaS Platforms &middot; HTML &middot; CSS &middot; JavaScript &middot; Web Design &middot; IoT Integration &middot; Digital Publishing &middot; Branding<br>
-  <b>Operations:</b> Workflow Coordination &middot; Operations Management &middot; Account Management &middot; Customer Support &middot; Night Audit &middot; Event Coordination</p>
+  <!-- ================= SKILLS ================= -->
+  <div class="sec"><svg class="burst" viewBox="0 0 100 100" aria-hidden="true"><g fill="#B7D62E"><path d="M50 0 L56 38 L95 20 L62 46 L100 50 L62 54 L95 80 L56 62 L50 100 L44 62 L5 80 L38 54 L0 50 L38 46 L5 20 L44 38Z"/></g></svg><h2>Core Skills</h2><div class="rule"></div></div>
+  <p class="skills"><b>Documents &amp; Data:</b> Microsoft Word · Excel · PowerPoint · Outlook · Document Formatting · Proofreading &amp; QA · PDF Workflows · SQL · Data Analysis &amp; Cleaning · Presentation Design<br>
+  <b>Technology:</b> Python · SaaS Platforms · HTML · CSS · JavaScript · Web Design · IoT Integration · Digital Publishing · Branding &amp; Graphic Design<br>
+  <b>Operations:</b> Workflow Coordination · Operations Management · SaaS Account Management · Customer Support · Night Audit · Front Desk · Event Coordination · Distribution &amp; Logistics</p>
 
-  <h2>Experience</h2>
+  <!-- ================= EXPERIENCE ================= -->
+  <div class="sec"><svg class="burst" viewBox="0 0 100 100" aria-hidden="true"><g fill="#C22A5E"><path d="M50 0 L56 38 L95 20 L62 46 L100 50 L62 54 L95 80 L56 62 L50 100 L44 62 L5 80 L38 54 L0 50 L38 46 L5 20 L44 38Z"/></g></svg><h2>Experience</h2><div class="rule"></div></div>
 
-  <div class="job"><div class="top"><span><span class="role">Founder / Owner</span>, <span class="org">Dude in the Desert Studios (LLC)</span> &middot; Palm Springs, CA</span><span class="when">JAN 2024 - PRESENT</span></div>
-  <p>Creative and technology studio run end to end: web design, graphic design, app development, coding, AI scripting, and art commissions. Designed and produced a 158-page interactive digital workbook; develops Python and SQL tools, automations, and IoT integrations for clients.</p></div>
+  <div class="job" style="--oc:#B97F0E"><div class="top"><span><span class="role">Founder &amp; Owner</span>, <span class="org">Dude in the Desert Studios LLC</span> · Palm Springs, CA</span><span class="when">Jan 2024 — Present</span></div>
+  <p>Creative technology studio run end to end: art sales and commissions, website design, graphic design, app development, coding, and AI scripting. Recent builds include a 159-page interactive book produced to print standard, hand-coded interactive websites, and a live Python service bridging a streaming platform to connected devices.</p></div>
 
-  <div class="job"><div class="top"><span><span class="role">Massage Therapist / Owner</span>, <span class="org">Tactus Vitae</span> &middot; Palm Springs, CA</span><span class="when">JAN 2024 - PRESENT</span></div>
-  <p>Independent wellness practice: therapeutic massage, on-site wellness, guided meditation, and yoga. Built a loyal repeat clientele through personalized treatment plans and meticulous client care.</p></div>
+  <div class="job" style="--oc:#C22A5E"><div class="top"><span><span class="role">Owner &amp; Practitioner</span>, <span class="org">Tactus Vitae</span> · Palm Springs, CA</span><span class="when">Jan 2024 — Present</span></div>
+  <p>Independent wellness practice: on-site massage therapy, guided meditation, and yoga. Scheduling, client communication, booking, and web presence all run in-house; repeat clients are the business model, so service quality and follow-through are everything.</p></div>
 
-  <div class="job"><div class="top"><span><span class="role">Workflow Coordinator / Legal Document Specialist</span>, <span class="org">Integreon Managed Solutions</span> &middot; Fargo, ND</span><span class="when">MAR 2020 - DEC 2023</span></div>
-  <p>Coordinated high-volume legal document production for a national Am Law 100 firm (client confidential per contract). Triaged and tracked a continuous job queue across concurrent matters; produced complex documents with advanced Word formatting, TOCs, cross-references, and redlines; ran QC and proofreading; used SQL and SaaS tools for queue management and reporting; intensive Microsoft Office training and mastery.</p></div>
+  <div class="job" style="--oc:#0E7C6F"><div class="top"><span><span class="role">Workflow Coordinator / Legal Document Specialist</span>, <span class="org">Integreon Managed Solutions</span> · Fargo, ND</span><span class="when">Mar 2020 — Dec 2023</span></div>
+  <p>Coordinated legal document production for a national Am Law 100 firm (client name confidential per contract) as the operational hub of a high-volume workflow: intake and triage, assignment, deadline tracking, quality control, and final delivery. Intensive Microsoft Suite training to mastery in Word, Excel, and Outlook; SaaS workflow platforms and SQL-driven lookups in daily quality control.</p></div>
 
-  <div class="job"><div class="top"><span><span class="role">Grower / Trimmer / Processor</span>, <span class="org">Roden Farms</span> &middot; Casselton, ND</span><span class="when">MAY 2021 - DEC 2023</span></div>
-  <p>Full-cycle licensed cannabis cultivation and processing (concurrent): selective pollination to bioengineer species, THC/CBD extraction with strict quality control, trimming and processing to standard, and full legal compliance documentation.</p></div>
+  <div class="job" style="--oc:#7A9A01"><div class="top"><span><span class="role">Grower, Trimmer &amp; Processor</span>, <span class="org">Roden Farms</span> · Casselton, ND</span><span class="when">May 2021 — Dec 2023</span></div>
+  <p>Hands-on cannabis production from cultivation to finished product (concurrent with Integreon): growing, trimming, and processing, including THC and CBD extraction and pollination work to bioengineer different species, with full legal compliance documentation.</p></div>
 
-  <div class="job"><div class="top"><span><span class="role">Night Auditor</span>, <span class="org">AmericInn Lodge &amp; Suites</span> &middot; Wahpeton, ND</span><span class="when">OCT 2019 - MAR 2020</span></div>
-  <p>Sole overnight team member: ran the complete night audit (revenue balancing, rate verification, financial and occupancy reports), front desk, reservations, guest care, property security, and cash/card reconciliation.</p></div>
+  <div class="job" style="--oc:#1FB6A6"><div class="top"><span><span class="role">Night Auditor</span>, <span class="org">AmericInn Lodge &amp; Suites</span> · Wahpeton, ND</span><span class="when">Oct 2019 — Mar 2020</span></div>
+  <p>Sole overnight operator of the hotel: front desk, guest services, security walks, and the nightly audit. Balanced the day's books, reconciled charges and payments, ran occupancy and revenue reports, and closed discrepancies before the morning team arrived.</p></div>
 
-  <div class="job"><div class="top"><span><span class="role">Distribution Manager &amp; Event Coordinator</span>, <span class="org">Kosmic Kombucha</span> &middot; Austin, TX</span><span class="when">MAR 2018 - SEP 2019</span></div>
-  <p>Coordinated distribution logistics, delivery scheduling, and inventory flow to retail accounts; maintained partner relationships; planned and staffed brand events, tastings, and promotions end to end.</p></div>
+  <div class="job" style="--oc:#C24E1F"><div class="top"><span><span class="role">Distribution Manager &amp; Event Coordinator</span>, <span class="org">Kosmic Kombucha</span> · Austin, TX</span><span class="when">Mar 2018 — Sep 2019</span></div>
+  <p>Ran distribution for a growing beverage brand: routing, inventory, and account orders tracked through ordering platforms and spreadsheets. Coordinated brand events end to end, from planning and staffing to on-site execution.</p></div>
 
-  <div class="job"><div class="top"><span><span class="role">Account Manager</span>, <span class="org">Luxe Valet</span> &middot; Austin, TX</span><span class="when">SEP 2015 - MAR 2018</span></div>
-  <p>Primary contact for a portfolio of venue client accounts: onboarding, service planning, staffing coordination. Worked daily in the company SaaS platform and used SQL for operational reporting; resolved escalations with a focus on retention.</p></div>
+  <div class="job" style="--oc:#14313A"><div class="top"><span><span class="role">Account Manager</span>, <span class="org">Luxe Valet</span> · Austin, TX</span><span class="when">Sep 2015 — Mar 2018</span></div>
+  <p>Primary point of contact between venue clients and operations teams for a SaaS-based valet services company. Owned a book of accounts end to end: onboarding, scheduling, service quality, issue resolution, and retention, with SQL-based reporting and billing checks.</p></div>
 
-  <div class="job"><div class="top"><span><span class="role">Lead Bartender &amp; Headwaiter</span>, <span class="org">Gringo's Tex-Mex Kitchen and Cantina</span> &middot; Texas City, TX</span><span class="when">AUG 2012 - AUG 2015</span></div>
-  <p>Dual leadership role in a high-volume restaurant: ran the bar program at peak service, trained and mentored service staff, led the dining room floor, handled cash and closing reconciliation.</p></div>
+  <div class="job" style="--oc:#C22A5E"><div class="top"><span><span class="role">Lead Bartender &amp; Headwaiter</span>, <span class="org">Gringo's Tex-Mex Kitchen and Cantina</span> · Texas City, TX</span><span class="when">Aug 2012 — Aug 2015</span></div>
+  <p>Dual leadership role in a high-volume restaurant: lead bartender running the bar program and headwaiter leading the dining room service team on the same shifts. Trained service staff, handled cash and close-out, and kept a packed house moving.</p></div>
 
-  <h2>Selected Projects</h2>
-  <p><b>The Ultimate Tarot: Interactive Guide &amp; Workbook</b> (158 pages, designed and produced end to end) &middot; <b>Live-Stream Automation Bridge</b> (Python, IoT, OBS integration) &middot; <b>The Ironwood Initiative Prospectus</b> (36-page funding packet with full Year-1 budget model) &middot; <b>Interactive One-Page Business Website</b> (hand-built HTML/CSS/JS). Full interactive versions on the web resume.</p>
+  <!-- ================= PROJECTS ================= -->
+  <div class="sec"><svg class="burst" viewBox="0 0 100 100" aria-hidden="true"><g fill="#F0A818"><path d="M50 0 L56 38 L95 20 L62 46 L100 50 L62 54 L95 80 L56 62 L50 100 L44 62 L5 80 L38 54 L0 50 L38 46 L5 20 L44 38Z"/></g></svg><h2>Selected Projects</h2><div class="rule"></div></div>
+  <p class="projects"><b>The Ultimate Tarot: Interactive Workbook</b>, a 159-page guide designed, typeset, and produced end to end · <b>Live-Stream Tip Bridge</b>, a Python service connecting tip events to devices in real time · <b>The Ironwood Initiative</b>, prospectus, budget, and grant applications for a Palm Springs nonprofit in formation · <b>Interactive Business Websites</b>, hand-built in HTML, CSS, and JavaScript.</p>
 
-  <h2>Education</h2>
+  <!-- ================= EDUCATION ================= -->
+  <div class="sec"><svg class="burst" viewBox="0 0 100 100" aria-hidden="true"><g fill="#D9A441"><path d="M50 0 L56 38 L95 20 L62 46 L100 50 L62 54 L95 80 L56 62 L50 100 L44 62 L5 80 L38 54 L0 50 L38 46 L5 20 L44 38Z"/></g></svg><h2>Education</h2><div class="rule"></div></div>
   <div class="edu">
-    <div><span class="role">Merit America</span><p>Google Data Analytics Certification, in progress, expected Nov 2026.</p></div>
-    <div><span class="role">University of Arkansas at Little Rock</span><p>Undergraduate coursework, Mechanical Systems Engineering.</p></div>
+    <div><span class="role">Merit America</span><p>Google Data Analytics Certification, in progress. Expected November 2026.</p></div>
+    <div><span class="role">Univ. of Arkansas at Little Rock</span><p>Undergraduate coursework, Mechanical Systems Engineering.</p></div>
     <div><span class="role">Availability</span><p>Open availability. Authorized to work in the US; no sponsorship required.</p></div>
   </div>
 
-  <div class="foot"><span>Interactive resume with linked skills and projects: <b>https://dudebartlett.github.io/</b></span><span>Palm Springs, California</span></div>
+  <!-- ================= FOOTER ================= -->
+  <div class="foot">
+    <div>
+      <div class="big">Let’s build the next thing.</div>
+      <p style="margin-top:3px">This page is the short version. The interactive resume wires every skill to the projects and positions where it happened, with the full gallery and work history:</p>
+      <p class="url" style="margin-top:3px">https://dudebartlett.github.io/</p>
+    </div>
+    <div class="qrbox">
+      <img src="img/qr-site.svg" alt="QR code linking to dudebartlett.github.io">
+      <div class="cap">Scan me</div>
+    </div>
+  </div>
 </div>
 </body>
 </html>
