@@ -3,464 +3,506 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dude Bartlett — Operations, Workflow &amp; Creative Technology</title>
-<meta name="description" content="Interactive resume of Dude Bartlett: operations and workflow coordination, SaaS account management, legal document production, hospitality, and creative technology. Palm Springs, California.">
+<title>Dude Bartlett — Operations, Workflow & Creative Technology</title>
+<meta name="description" content="Interactive resume of Dude Bartlett: operations, SaaS account management, workflow coordination, customer support, and creative technology. Palm Springs, California.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Marcellus&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Limelight&family=Jost:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Marcellus&display=swap" rel="stylesheet">
 <style>
 :root{
-  --sand:#F6EDDA; --cream:#FCF7EA; --paper:#FFFDF6;
-  --teal:#17645F; --teal-deep:#0F4A46; --turq:#2A9D8F;
-  --coral:#E76F51; --coral-soft:#F4A261; --mustard:#E9C46A;
-  --ink:#22343A; --ink-soft:#43555C; --olive:#7A7E46;
-  --shadow:7px 7px 0 rgba(23,100,95,.16);
+  --navy:#0B2B33; --deep:#071E25; --teal:#0E7C6F; --turq:#1FB6A6;
+  --mustard:#F0A818; --gold:#D9A441; --lime:#B7D62E; --pink:#E5447C;
+  --coral:#D95D27; --cream:#FAF0DA; --sand:#F1DFBB; --ink:#14313A;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--sand);color:var(--ink);font-family:'Jost',sans-serif;font-weight:400;line-height:1.55;
-  background-image:radial-gradient(circle at 12% 8%, rgba(233,196,106,.25) 0 90px, transparent 91px),
-                   radial-gradient(circle at 88% 22%, rgba(42,157,143,.14) 0 130px, transparent 131px),
-                   radial-gradient(circle at 78% 88%, rgba(231,111,81,.12) 0 110px, transparent 111px);}
-::selection{background:var(--mustard);color:var(--teal-deep)}
-a{color:var(--teal)}
-h1,h2,h3{font-family:'Poiret One',cursive;font-weight:400;letter-spacing:.04em}
-.wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--ink);line-height:1.55;overflow-x:hidden;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cpath d='M20 70 Q45 20 95 35 Q50 45 38 78 Q30 95 20 70Z' fill='%230E7C6F' fill-opacity='0.05'/%3E%3Cpath d='M95 120 Q115 85 140 95 Q118 105 112 128 Q105 140 95 120Z' fill='%23F0A818' fill-opacity='0.06'/%3E%3C/svg%3E");}
+::selection{background:var(--mustard);color:var(--navy)}
+h1,h2,h3,.disp{font-family:'Limelight',cursive;font-weight:400;letter-spacing:.04em}
+.wrap{max-width:1140px;margin:0 auto;padding:0 22px;position:relative}
+#wires{position:absolute;top:0;left:0;pointer-events:none;z-index:60;overflow:visible}
+#wires path{fill:none;stroke-width:3.5;stroke-linecap:round;filter:drop-shadow(0 0 6px rgba(240,168,24,.85)) drop-shadow(0 0 2px rgba(229,68,124,.6))}
+#wires .node{fill:var(--mustard);stroke:var(--navy);stroke-width:2;filter:drop-shadow(0 0 5px rgba(240,168,24,.9))}
 
-/* ---------- decorative atoms ---------- */
-.burst{display:inline-block;vertical-align:middle;animation:spin 46s linear infinite}
-@keyframes spin{to{transform:rotate(360deg)}}
-.breeze{height:26px;opacity:.5;
-  background-image:
-    radial-gradient(circle at 50% 50%, transparent 5px, var(--teal) 5.5px, var(--teal) 7px, transparent 7.5px),
-    linear-gradient(var(--teal),var(--teal));
-  background-size:26px 26px, 26px 2px;background-position:center, center;background-repeat:repeat-x;
-  -webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
-.boomerang{position:absolute;pointer-events:none;opacity:.55}
+/* ---------- HERO ---------- */
+.hero{background:var(--navy);color:var(--cream);position:relative;overflow:hidden}
+.hero-img{display:block;width:100%;height:300px;object-fit:cover;object-position:center 62%;border-bottom:7px solid var(--mustard)}
+.hero-inner{display:flex;gap:34px;align-items:center;padding:34px 0 8px;flex-wrap:wrap}
+.shot{position:relative;flex:0 0 auto;margin-top:-118px;z-index:3}
+.shot img{width:218px;height:272px;object-fit:cover;display:block;border:6px solid var(--cream);outline:3px solid var(--mustard);box-shadow:12px 12px 0 var(--teal);transform:rotate(-2deg)}
+.shot .badge{position:absolute;right:-24px;top:-24px;width:64px;height:64px;animation:spin 22s linear infinite;z-index:4}
+.hero-txt{flex:1 1 480px;padding-bottom:10px}
+.eyebrow{font-family:'Marcellus',serif;letter-spacing:.42em;text-transform:uppercase;font-size:.72rem;color:var(--lime)}
+h1{font-size:clamp(3rem,8vw,5.2rem);line-height:1.02;color:var(--cream);text-shadow:4px 4px 0 var(--teal);margin:.08em 0 .12em}
+.tagline{font-size:clamp(1rem,2.2vw,1.25rem);font-weight:500;color:var(--sand)}
+.tagline b{color:var(--mustard);font-weight:700}
+.contacts{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}
+.chip-link{display:inline-flex;align-items:center;gap:7px;padding:8px 15px;border:2px solid var(--turq);border-radius:999px;color:var(--cream);text-decoration:none;font-size:.9rem;font-weight:600;transition:.2s;background:rgba(31,182,166,.08)}
+.chip-link:hover{background:var(--turq);color:var(--navy);transform:translateY(-2px)}
+.chip-link.hot{border-color:var(--mustard);background:var(--mustard);color:var(--navy)}
+.chip-link.hot:hover{background:var(--pink);border-color:var(--pink);color:#fff}
+.hero-art{width:100%;display:block;height:120px;object-fit:cover;object-position:center 30%;margin-top:26px;border-top:5px solid var(--pink)}
 
-/* ---------- hero ---------- */
-header{position:relative;padding:64px 0 30px;text-align:center;overflow:hidden}
-.eyebrow{font-family:'Marcellus',serif;letter-spacing:.42em;text-transform:uppercase;font-size:.72rem;color:var(--coral);margin-bottom:14px}
-h1{font-size:clamp(3rem,8.5vw,5.6rem);color:var(--teal-deep);line-height:1.02}
-h1 .accent{color:var(--coral)}
-.headline{margin:18px auto 6px;max-width:760px;font-size:clamp(1.02rem,2.4vw,1.3rem);font-weight:500;color:var(--ink)}
-.headline span{color:var(--teal);white-space:nowrap}
-.tagline{color:var(--ink-soft);font-style:italic;font-size:1rem;margin-top:6px}
-.contactbar{margin:26px auto 0;display:flex;flex-wrap:wrap;gap:10px 22px;justify-content:center;font-size:.95rem}
-.contactbar a{text-decoration:none;font-weight:500;border-bottom:2px solid var(--mustard)}
-.contactbar a:hover{border-bottom-color:var(--coral)}
-.printlink{display:inline-block;margin-top:28px;background:var(--teal);color:var(--cream);text-decoration:none;
-  font-family:'Marcellus',serif;letter-spacing:.14em;padding:13px 30px;border-radius:999px;box-shadow:var(--shadow);
-  transition:transform .18s ease, background .18s ease}
-.printlink:hover{background:var(--coral);transform:translateY(-2px)}
-
-/* ---------- sections ---------- */
-section{padding:44px 0 8px}
+/* ---------- SECTION SCAFFOLD ---------- */
+section{padding:52px 0 8px;position:relative}
 .sec-head{display:flex;align-items:center;gap:16px;margin-bottom:8px}
-.sec-head h2{font-size:clamp(1.7rem,4vw,2.4rem);color:var(--teal-deep)}
-.sec-head .rule{flex:1;height:3px;background:repeating-linear-gradient(90deg,var(--mustard) 0 26px,transparent 26px 40px)}
-.sec-sub{color:var(--ink-soft);margin-bottom:22px;max-width:720px}
-.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
-.reveal.in{opacity:1;transform:none}
+.sec-head .burst{width:44px;height:44px;flex:0 0 auto;animation:spin 30s linear infinite}
+.sec-head h2{font-size:clamp(1.7rem,4.4vw,2.5rem);color:var(--navy)}
+.sec-head .rule{flex:1;height:4px;background:repeating-linear-gradient(90deg,var(--mustard) 0 26px,var(--teal) 26px 52px,var(--pink) 52px 78px);border-radius:2px}
+.sec-sub{font-family:'Marcellus',serif;letter-spacing:.14em;text-transform:uppercase;font-size:.78rem;color:var(--teal);margin-bottom:22px}
+@keyframes spin{to{transform:rotate(360deg)}}
 
-/* ---------- skills ---------- */
-.skills{display:flex;flex-wrap:wrap;gap:9px}
-.chip{cursor:pointer;border:2px solid var(--teal);color:var(--teal-deep);background:var(--cream);
-  padding:7px 15px;border-radius:999px;font-family:'Jost',sans-serif;font-size:.92rem;font-weight:500;
-  transition:all .18s ease}
-.chip:hover{background:var(--mustard);border-color:var(--mustard);transform:translateY(-2px)}
-.chip.active{background:var(--coral);border-color:var(--coral);color:#fff}
-#filterbar{display:none;margin:18px 0 4px;background:var(--teal-deep);color:var(--cream);border-radius:12px;
-  padding:12px 18px;align-items:center;gap:14px;box-shadow:var(--shadow)}
-#filterbar.show{display:flex}
-#filterbar button{margin-left:auto;background:var(--mustard);border:none;color:var(--teal-deep);font-family:'Jost',sans-serif;
-  font-weight:600;padding:6px 16px;border-radius:999px;cursor:pointer}
-#filterbar button:hover{background:var(--coral-soft)}
+/* ---------- ABOUT ---------- */
+.about{display:grid;grid-template-columns:1.25fr .85fr;gap:28px;align-items:stretch}
+.about-card{background:#fff;border:3px solid var(--ink);box-shadow:10px 10px 0 var(--mustard);padding:28px 30px;font-size:1.05rem}
+.about-card p+p{margin-top:12px}
+.about-card b{color:var(--teal)}
+.about-img{border:3px solid var(--ink);box-shadow:10px 10px 0 var(--pink);overflow:hidden;min-height:280px}
+.about-img img{width:100%;height:100%;object-fit:cover;display:block}
 
-/* ---------- cards ---------- */
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
-.card{background:var(--paper);border:2.5px solid var(--teal-deep);border-radius:16px;padding:22px;box-shadow:var(--shadow);
-  transition:opacity .35s ease, filter .35s ease, transform .35s ease, box-shadow .35s ease;position:relative}
-.card h3{font-size:1.28rem;color:var(--teal-deep);margin-bottom:4px}
-.card .meta{font-family:'Marcellus',serif;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--coral);margin-bottom:10px}
-.card p{color:var(--ink-soft);font-size:.97rem}
-.card.dim{opacity:.22;filter:grayscale(.7)}
-.card.match{box-shadow:0 0 0 3px var(--mustard), var(--shadow);transform:translateY(-3px)}
-.mini-skills{margin-top:14px;display:flex;flex-wrap:wrap;gap:6px}
-.mini{font-size:.74rem;font-weight:600;letter-spacing:.04em;background:var(--sand);border:1.5px solid var(--turq);
-  color:var(--teal-deep);border-radius:999px;padding:3px 10px;cursor:pointer;transition:all .15s ease}
-.mini:hover{background:var(--mustard);border-color:var(--mustard)}
+/* ---------- SKILLS (navy band) ---------- */
+.skills-band{background:var(--navy);margin-top:52px;padding:46px 0 40px;position:relative}
+.skills-band .sec-head h2{color:var(--cream)}
+.skills-band .sec-sub{color:var(--lime)}
+.hint{color:var(--sand);font-size:1rem;max-width:760px}
+.hint b{color:var(--mustard)}
+.skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.skill{cursor:pointer;border:2px solid var(--turq);background:transparent;color:var(--cream);padding:9px 17px;border-radius:999px;font-family:'Jost';font-size:.95rem;font-weight:600;transition:.18s;position:relative;z-index:2}
+.skill:hover{border-color:var(--mustard);color:var(--mustard);transform:translateY(-2px)}
+.skill.active{background:var(--mustard);border-color:var(--mustard);color:var(--navy);box-shadow:0 0 0 4px rgba(240,168,24,.3),0 0 22px rgba(240,168,24,.55)}
+.filterbar{display:none;margin-top:22px;background:var(--deep);border:2px solid var(--mustard);color:var(--cream);padding:12px 18px;border-radius:6px;align-items:center;gap:14px;flex-wrap:wrap}
+.filterbar.show{display:flex}
+.filterbar .fname{font-family:'Limelight';color:var(--mustard);letter-spacing:.05em;font-size:1.05rem}
+.filterbar button{margin-left:auto;background:var(--pink);color:#fff;border:none;padding:8px 18px;border-radius:999px;font-family:'Jost';font-weight:700;cursor:pointer}
+.filterbar button:hover{background:var(--coral)}
 
-/* ---------- experience ---------- */
-.job{margin-bottom:18px;overflow:hidden}
-.job-head{width:100%;display:flex;align-items:center;gap:16px;background:none;border:none;cursor:pointer;text-align:left;
-  font-family:inherit;padding:2px 0}
-.job-head .when{font-family:'Marcellus',serif;font-size:.78rem;letter-spacing:.1em;color:var(--cream);background:var(--teal);
-  border-radius:8px;padding:7px 11px;min-width:118px;text-align:center;line-height:1.35}
-.job-head .what{flex:1}
-.job-head .what h3{font-size:1.32rem;color:var(--teal-deep)}
-.job-head .what .org{color:var(--coral);font-weight:600;letter-spacing:.02em}
-.job-head .what .loc{color:var(--ink-soft);font-size:.9rem}
-.job-head .plus{font-family:'Poiret One',cursive;font-size:1.9rem;color:var(--coral);transition:transform .45s cubic-bezier(.6,-0.2,.3,1.4);line-height:1}
-.job.open .job-head .plus{transform:rotate(405deg)}
-.job-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .55s cubic-bezier(.5,0,.2,1)}
-.job.open .job-body{grid-template-rows:1fr}
-.job-body>div{overflow:hidden}
-.job-body .inner{padding:14px 4px 6px 134px;color:var(--ink-soft);font-size:.98rem}
-.job-body ul{margin:8px 0 10px 18px}
-.job-body li{margin-bottom:5px}
-.job-body li::marker{color:var(--coral)}
-@media(max-width:640px){.job-body .inner{padding-left:4px}.job-head .when{min-width:96px;font-size:.68rem}}
+/* ---------- CARDS ---------- */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px}
+.card{background:#fff;border:3px solid var(--ink);padding:24px 24px 20px;position:relative;transition:opacity .25s,transform .25s,box-shadow .25s;box-shadow:8px 8px 0 rgba(11,43,51,.16)}
+.card::before{content:"";position:absolute;top:0;left:0;right:0;height:8px;background:var(--c,var(--teal))}
+.card h3{font-size:1.28rem;color:var(--navy);margin:4px 0 2px}
+.card .sub{font-family:'Marcellus',serif;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;color:var(--c,var(--teal))}
+.card p{font-size:.97rem;margin-top:9px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.tag{font-size:.74rem;font-weight:700;letter-spacing:.03em;padding:4px 10px;border-radius:999px;border:1.5px solid var(--ink);background:var(--sand);cursor:pointer;transition:.15s}
+.tag:hover{background:var(--mustard)}
+body.filtering .card{opacity:.28}
+body.filtering .card.lit{opacity:1;transform:translateY(-4px);box-shadow:0 0 0 4px var(--mustard),0 0 30px rgba(240,168,24,.55),10px 12px 0 rgba(11,43,51,.2);z-index:2}
 
-/* ---------- education / footer ---------- */
-.edu{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
-footer{margin-top:56px;background:var(--teal-deep);color:var(--cream);padding:40px 0 34px;text-align:center;position:relative;overflow:hidden}
-footer .big{font-family:'Poiret One',cursive;font-size:1.7rem;letter-spacing:.05em}
-footer a{color:var(--mustard);text-decoration:none;border-bottom:1px solid var(--mustard)}
-footer p{opacity:.85;font-size:.92rem;margin-top:8px}
+/* ---------- GALLERY ---------- */
+.gallery-band{background:var(--deep);margin-top:56px;padding:48px 0 54px}
+.gallery-band .sec-head h2{color:var(--cream)}
+.gallery-band .sec-sub{color:var(--turq)}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.gal figure{border:3px solid var(--cream);background:var(--navy);overflow:hidden;position:relative}
+.gal img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+.gal figure:hover img{transform:scale(1.045)}
+.gal figcaption{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(transparent,rgba(7,30,37,.92) 55%);color:var(--cream);font-family:'Marcellus',serif;font-size:.8rem;letter-spacing:.08em;padding:26px 12px 9px;text-transform:uppercase}
+.gal .wide{grid-column:span 2}
+.gal .tall{grid-row:span 2}
+
+/* ---------- JOBS ---------- */
+.job{background:#fff;border:3px solid var(--ink);margin-bottom:18px;box-shadow:7px 7px 0 rgba(11,43,51,.14);transition:opacity .25s,box-shadow .25s;position:relative}
+.job::before{content:"";position:absolute;top:0;bottom:0;left:0;width:9px;background:var(--c,var(--teal))}
+.job-head{width:100%;display:flex;align-items:center;gap:16px;background:none;border:none;cursor:pointer;text-align:left;padding:19px 22px 19px 30px;font-family:'Jost'}
+.job-head .jt{flex:1}
+.job-head h3{font-size:1.3rem;color:var(--navy)}
+.job-head .org{font-weight:600;color:var(--c,var(--teal));font-size:1rem}
+.job-head .meta{font-family:'Marcellus',serif;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:#5d737b;white-space:nowrap;text-align:right}
+.plus{flex:0 0 auto;width:36px;height:36px;border-radius:50%;border:3px solid var(--navy);color:var(--navy);display:grid;place-items:center;font-size:1.35rem;font-weight:700;transition:transform .35s,background .3s,color .3s;background:var(--cream)}
+.job.open .plus{transform:rotate(135deg);background:var(--mustard)}
+.job-body{max-height:0;overflow:hidden;transition:max-height .55s ease}
+.job-body-in{padding:2px 26px 22px 32px}
+.job-body p{font-size:.99rem;max-width:88ch}
+.job-body p+p{margin-top:9px}
+body.filtering .job{opacity:.3}
+body.filtering .job.lit{opacity:1;box-shadow:0 0 0 4px var(--mustard),0 0 30px rgba(240,168,24,.5),8px 9px 0 rgba(11,43,51,.18)}
+
+/* ---------- EDUCATION / FOOTER ---------- */
+.edu{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.edu .card p{margin-top:5px}
+.foot-band{background:var(--navy);color:var(--cream);margin-top:60px;padding:42px 0 46px;text-align:center;position:relative;overflow:hidden}
+.foot-band .big{font-family:'Limelight';font-size:clamp(1.6rem,4.5vw,2.4rem);color:var(--mustard)}
+.foot-band a{color:var(--turq)}
+.foot-art{width:100%;height:110px;object-fit:cover;object-position:center 65%;display:block;border-bottom:6px solid var(--lime)}
+@media(max-width:860px){
+  .about,.edu{grid-template-columns:1fr}
+  .shot{margin-top:-70px}
+  .shot img{width:160px;height:200px}
+  .gal{grid-template-columns:repeat(2,1fr)}
+  .job-head .meta{display:none}
+  .hero-img{height:210px}
+}
 </style>
 </head>
 <body>
+<svg id="wires" aria-hidden="true"><defs>
+<linearGradient id="wireGrad" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#F0A818"/><stop offset=".55" stop-color="#D95D27"/><stop offset="1" stop-color="#E5447C"/>
+</linearGradient></defs></svg>
 
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <defs>
-    <symbol id="starburst" viewBox="0 0 100 100">
-      <polygon fill="currentColor" points="50,0 56,32 74,8 62,38 92,22 68,46 100,50 68,54 92,78 62,62 74,92 56,68 50,100 44,68 26,92 38,62 8,78 32,54 0,50 32,46 8,22 38,38 26,8 44,32"/>
-    </symbol>
-    <symbol id="boomer" viewBox="0 0 100 60">
-      <path fill="currentColor" d="M8,52 Q50,-14 92,52 Q50,26 8,52 Z"/>
-    </symbol>
-  </defs>
-</svg>
-
-<header>
-  <svg class="boomerang" style="top:26px;left:4%;width:110px;color:var(--coral-soft)" aria-hidden="true"><use href="#boomer"/></svg>
-  <svg class="boomerang" style="bottom:8px;right:5%;width:90px;color:var(--turq)" aria-hidden="true"><use href="#boomer"/></svg>
-  <div class="wrap">
-    <p class="eyebrow">Palm Springs &middot; California</p>
-    <h1>DUDE <span class="accent">BARTLETT</span> <svg class="burst" width="46" height="46" style="color:var(--mustard)" aria-hidden="true"><use href="#starburst"/></svg></h1>
-    <p class="headline">Operations &amp; Workflow Coordination <span>&#10038;</span> SaaS Account Management <span>&#10038;</span> Legal Document Production <span>&#10038;</span> Customer Support <span>&#10038;</span> Creative Technology</p>
-    <p class="tagline">The person you call when the queue is deep, the deadline is real, and it has to be right.</p>
-    <div class="contactbar">
-      <a href="mailto:dude.bartlett.g@gmail.com">dude.bartlett.g@gmail.com</a>
-      <a href="tel:+16193695432">(619) 369-5432</a>
-      <a href="https://www.linkedin.com/in/dude-bartlett/" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://www.upwork.com/freelancers/dudeb3" target="_blank" rel="noopener">Upwork</a>
-      <span>Palm Springs, CA</span>
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <img class="hero-img" src="img/hero-pool.jpg" alt="Mid-century Palm Springs poolside illustration in teal, orange, and gold">
+  <div class="wrap hero-inner">
+    <div class="shot">
+      <svg class="badge" viewBox="0 0 100 100" aria-hidden="true"><g fill="#B7D62E"><path d="M50 0 L56 38 L95 20 L62 46 L100 50 L62 54 L95 80 L56 62 L50 100 L44 62 L5 80 L38 54 L0 50 L38 46 L5 20 L44 38Z"/></g></svg>
+      <img src="img/headshot.jpg" alt="Portrait of Dude Bartlett">
     </div>
-    <a class="printlink" href="print.html">(Print Copy of Resume here)</a>
+    <div class="hero-txt">
+      <div class="eyebrow">Palm Springs · California</div>
+      <h1>DUDE BARTLETT</h1>
+      <p class="tagline">Operations · SaaS Account Management · Workflow Coordination · Customer Support · <b>Creative Technology</b></p>
+      <div class="contacts">
+        <a class="chip-link" href="mailto:dude.bartlett.g@gmail.com">dude.bartlett.g@gmail.com</a>
+        <a class="chip-link" href="tel:+16193695432">(619) 369-5432</a>
+        <a class="chip-link" href="https://www.linkedin.com/in/dude-bartlett/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="chip-link" href="https://github.com/dudebartlett" target="_blank" rel="noopener">GitHub</a>
+        <a class="chip-link hot" href="print.html">(Print Copy of Resume here)</a>
+      </div>
+    </div>
   </div>
+  <img class="hero-art" src="img/art-palmroad.jpg" alt="Palm trees lining a desert road under a radiating sunburst sky">
 </header>
 
-<div class="wrap"><div class="breeze" aria-hidden="true"></div></div>
-
-<main class="wrap">
-
-<section id="skills" class="reveal">
-  <div class="sec-head"><h2>Skills</h2><div class="rule"></div><svg class="burst" width="30" height="30" style="color:var(--coral)" aria-hidden="true"><use href="#starburst"/></svg></div>
-  <p class="sec-sub">Tap any skill and watch where it lights up. Every skill below is wired to the projects and positions where Dude actually used it.</p>
-  <div class="skills" id="skillcloud">
-    <button class="chip" data-skill="workflow">Workflow Coordination</button>
-    <button class="chip" data-skill="word">Microsoft Word</button>
-    <button class="chip" data-skill="docformat">Document Formatting</button>
-    <button class="chip" data-skill="proof">Proofreading</button>
-    <button class="chip" data-skill="excel">Microsoft Excel</button>
-    <button class="chip" data-skill="saas">SaaS Platforms</button>
-    <button class="chip" data-skill="sql">SQL</button>
-    <button class="chip" data-skill="python">Python</button>
-    <button class="chip" data-skill="data">Data Analysis</button>
-    <button class="chip" data-skill="dataclean">Data Cleaning</button>
-    <button class="chip" data-skill="webdesign">Web Design</button>
-    <button class="chip" data-skill="html">HTML</button>
-    <button class="chip" data-skill="css">CSS</button>
-    <button class="chip" data-skill="js">JavaScript</button>
-    <button class="chip" data-skill="iot">IoT Integration</button>
-    <button class="chip" data-skill="branding">Branding</button>
-    <button class="chip" data-skill="slides">Presentation Design</button>
-    <button class="chip" data-skill="pdf">PDF Conversion</button>
-    <button class="chip" data-skill="publishing">Digital Publishing</button>
-    <button class="chip" data-skill="ops">Operations Management</button>
-    <button class="chip" data-skill="accounts">Account Management</button>
-    <button class="chip" data-skill="support">Customer Support</button>
-    <button class="chip" data-skill="audit">Night Audit</button>
-    <button class="chip" data-skill="events">Event Coordination</button>
-  </div>
-  <div id="filterbar" role="status"><span id="filtertext"></span><button id="clearfilter" type="button">Show everything</button></div>
-</section>
-
-<section id="projects" class="reveal">
-  <div class="sec-head"><h2>Selected Projects</h2><div class="rule"></div><svg class="burst" width="30" height="30" style="color:var(--turq)" aria-hidden="true"><use href="#starburst"/></svg></div>
-  <p class="sec-sub">Real work, shipped. Each project carries the skills it proves; tap a skill tag on any card to see everywhere else that skill shows up.</p>
-  <div class="grid">
-
-    <article class="card" data-skills="publishing branding docformat pdf">
-      <h3>The Ultimate Tarot: Interactive Guide &amp; Workbook</h3>
-      <p class="meta">Digital Publishing &middot; 158 Pages</p>
-      <p>A complete interactive workbook designed and produced end to end under his own brand: layout system, illustration direction, proofreading pass, and production to a finished, fillable-ready file. Concept to shipped product, one pair of hands.</p>
-      <div class="mini-skills"><span class="mini" data-skill="publishing">Digital Publishing</span><span class="mini" data-skill="branding">Branding</span><span class="mini" data-skill="docformat">Document Formatting</span><span class="mini" data-skill="pdf">PDF Conversion</span></div>
-    </article>
-
-    <article class="card" data-skills="python iot js saas">
-      <h3>Live-Stream Automation Bridge</h3>
-      <p class="meta">Python &middot; IoT &middot; Streaming Tech</p>
-      <p>A Python bridge that turns live audience events into real-time device actions over the Intiface/Buttplug protocol, with a local web control panel, OBS scene integration, and privacy tooling including automated face blur. Built, tested, and run on his own streaming PC.</p>
-      <div class="mini-skills"><span class="mini" data-skill="python">Python</span><span class="mini" data-skill="iot">IoT Integration</span><span class="mini" data-skill="js">JavaScript</span><span class="mini" data-skill="saas">SaaS Platforms</span></div>
-    </article>
-
-    <article class="card" data-skills="webdesign html css js branding">
-      <h3>Interactive One-Page Business Website</h3>
-      <p class="meta">Web Design &middot; Front-End Build</p>
-      <p>A single-page interactive business site designed and hand-built with semantic HTML, modern CSS, and vanilla JavaScript. Fast, responsive, and built to convert a visitor into a client in one scroll.</p>
-      <div class="mini-skills"><span class="mini" data-skill="webdesign">Web Design</span><span class="mini" data-skill="html">HTML</span><span class="mini" data-skill="css">CSS</span><span class="mini" data-skill="js">JavaScript</span><span class="mini" data-skill="branding">Branding</span></div>
-    </article>
-
-    <article class="card" data-skills="docformat word data branding pdf">
-      <h3>The Ironwood Initiative Prospectus</h3>
-      <p class="meta">Nonprofit Concept &middot; 36-Page Packet</p>
-      <p>A 36-page, sales-grade funding prospectus for a Palm Springs transitional housing and recovery nonprofit in formation, including a full Year-1 budget model (about $452K), program design, and grant application portfolio. Research, writing, numbers, and design, all his.</p>
-      <div class="mini-skills"><span class="mini" data-skill="docformat">Document Formatting</span><span class="mini" data-skill="word">Microsoft Word</span><span class="mini" data-skill="data">Data Analysis</span><span class="mini" data-skill="branding">Branding</span><span class="mini" data-skill="pdf">PDF Conversion</span></div>
-    </article>
-
-    <article class="card" data-skills="python sql data dataclean">
-      <h3>Merit America Data Analytics Capstone Work</h3>
-      <p class="meta">Data &middot; Certification in Progress</p>
-      <p>Coursework and project work toward the Google Data Analytics Certification through Merit America (expected November 2026): data cleaning, SQL querying, spreadsheet analysis, and presenting findings clearly to non-technical audiences.</p>
-      <div class="mini-skills"><span class="mini" data-skill="python">Python</span><span class="mini" data-skill="sql">SQL</span><span class="mini" data-skill="data">Data Analysis</span><span class="mini" data-skill="dataclean">Data Cleaning</span></div>
-    </article>
-
-    <article class="card" data-skills="branding webdesign publishing">
-      <h3>Acrylic Paintings &amp; Digital Graphics</h3>
-      <p class="meta">Original Art &middot; Commissions</p>
-      <p>Original acrylic works and digital illustration sold on commission: concept sketches, color studies, and finished pieces, plus brand graphics for clients. The eye behind every design project on this page.</p>
-      <div class="mini-skills"><span class="mini" data-skill="branding">Branding</span><span class="mini" data-skill="webdesign">Web Design</span><span class="mini" data-skill="publishing">Digital Publishing</span></div>
-    </article>
-
+<!-- ================= ABOUT ================= -->
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <svg class="burst" viewBox="0 0 100 100" aria-hidden="true"><g fill="#F0A818"><path d="M50 0 L56 38 L95 20 L62 46 L100 50 L62 54 L95 80 L56 62 L50 100 L44 62 L5 80 L38 54 L0 50 L38 46 L5 20 L44 38Z"/></g></svg>
+      <h2>The Short Version</h2><div class="rule"></div>
+    </div>
+    <div class="about">
+      <div class="about-card">
+        <p>Operations and support specialist with a career that runs from <b>legal workflow coordination</b> for a national Am Law 100 firm, through <b>SaaS account management</b>, hospitality night audit, and distribution, to founding two Palm Springs businesses of my own. At Integreon I coordinated legal document production end to end: intake, assignment, quality control, and delivery under deadline, with <b>Microsoft Office mastery</b> trained into the work daily.</p>
+        <p>Since January 2024 I have run <b>Dude in the Desert Studios</b> (art, web design, app development, and AI scripting) and <b>Tactus Vitae</b> (massage therapy and wellness), building hands-on depth in <b>Python, SQL, SaaS platforms, and IoT</b> along the way. I am completing a Google Data Analytics Certification through Merit America.</p>
+        <p>The through-line: hand me a messy process and I will make it hum. Calm under pressure, exact with details, and genuinely good with people.</p>
+      </div>
+      <div class="about-img"><img src="img/art-house.jpg" alt="Mid-century Palm Springs house with chartreuse and magenta walls framed by tall palms"></div>
+    </div>
   </div>
 </section>
 
-<section id="experience" class="reveal">
-  <div class="sec-head"><h2>Experience</h2><div class="rule"></div><svg class="burst" width="30" height="30" style="color:var(--mustard)" aria-hidden="true"><use href="#starburst"/></svg></div>
-  <p class="sec-sub">Fourteen years, five industries, one through-line: keep the operation moving and the client happy. Tap any role to unfold what it actually entailed.</p>
+<!-- ================= SKILLS ================= -->
+<div class="skills-band" id="skills">
+  <div class="wrap">
+    <div class="sec-head">
+      <svg class="burst" viewBox="0 0 100 100" aria-hidden="true"><g fill="#B7D62E"><path d="M50 0 L56 38 L95 20 L62 46 L100 50 L62 54 L95 80 L56 62 L50 100 L44 62 L5 80 L38 54 L0 50 L38 46 L5 20 L44 38Z"/></g></svg>
+      <h2>Skills, Wired In</h2><div class="rule"></div>
+    </div>
+    <div class="sec-sub">Tap a skill and watch the current run</div>
+    <p class="hint">Every skill below is <b>live-wired</b> to the projects and positions where it actually happened. Tap one and follow the glowing wire: it lights the path to each match and unfolds the roles for you.</p>
+    <div class="skills" id="skillRow"></div>
+    <div class="filterbar" id="filterbar">
+      <span>Now showing</span><span class="fname" id="fname"></span><span id="fcount"></span>
+      <button id="clearBtn" type="button">Clear ✕</button>
+    </div>
+  </div>
+</div>
 
-  <article class="card job" data-skills="python sql webdesign html css js branding pdf publishing ops">
-    <button class="job-head" type="button" aria-expanded="false">
-      <span class="when">JAN 2024<br>PRESENT</span>
-      <span class="what"><h3>Founder / Owner</h3><span class="org">Dude in the Desert Studios (LLC)</span> <span class="loc">&middot; Palm Springs, CA</span></span>
-      <span class="plus">+</span>
-    </button>
-    <div class="job-body"><div><div class="inner">
-      <p>Creative and technology studio run end to end: client consultation, scoping, design, development, delivery, and support.</p>
-      <ul>
-        <li>Designed and produced a 158-page interactive digital workbook from concept to finished file.</li>
-        <li>Builds websites, branding packages, and digital products for clients, from logo to launch.</li>
-        <li>Develops Python and SQL tools and automations, including IoT integrations and AI-assisted workflows.</li>
-        <li>Manages pricing, contracts, scheduling, and client relationships directly.</li>
-      </ul>
-      <div class="mini-skills"><span class="mini" data-skill="python">Python</span><span class="mini" data-skill="sql">SQL</span><span class="mini" data-skill="webdesign">Web Design</span><span class="mini" data-skill="branding">Branding</span><span class="mini" data-skill="publishing">Digital Publishing</span><span class="mini" data-skill="ops">Operations</span></div>
-    </div></div></div>
-  </article>
-
-  <article class="card job" data-skills="support ops">
-    <button class="job-head" type="button" aria-expanded="false">
-      <span class="when">JAN 2024<br>PRESENT</span>
-      <span class="what"><h3>Massage Therapist / Owner</h3><span class="org">Tactus Vitae</span> <span class="loc">&middot; Palm Springs, CA</span></span>
-      <span class="plus">+</span>
-    </button>
-    <div class="job-body"><div><div class="inner">
-      <p>Independent wellness practice: therapeutic massage, on-site wellness services, guided meditation, and yoga.</p>
-      <ul>
-        <li>Built a loyal repeat clientele through personalized treatment plans and meticulous client care.</li>
-        <li>Provides on-site services for private clients and events, managing equipment, setup, and communication.</li>
-        <li>Combines bodywork with guided meditation and yoga instruction for a complete wellness offering.</li>
-      </ul>
-      <div class="mini-skills"><span class="mini" data-skill="support">Customer Support</span><span class="mini" data-skill="ops">Operations</span></div>
-    </div></div></div>
-  </article>
-
-  <article class="card job" data-skills="workflow word docformat proof excel saas sql slides pdf dataclean">
-    <button class="job-head" type="button" aria-expanded="false">
-      <span class="when">MAR 2020<br>DEC 2023</span>
-      <span class="what"><h3>Workflow Coordinator / Legal Document Specialist</h3><span class="org">Integreon Managed Solutions</span> <span class="loc">&middot; Fargo, ND</span></span>
-      <span class="plus">+</span>
-    </button>
-    <div class="job-body"><div><div class="inner">
-      <p>Coordinated high-volume legal document production supporting a national Am Law 100 firm (client identity confidential per contract). The coordination point between attorneys, support teams, and production specialists.</p>
-      <ul>
-        <li>Triaged, assigned, and tracked a continuous queue of document jobs across concurrent matters, balancing turnaround, priority changes, and quality standards.</li>
-        <li>Produced complex legal documents in Microsoft Word: agreements, pleadings, and filings with advanced formatting, styles, tables of contents, cross-references, and redlines.</li>
-        <li>Ran quality control and proofreading passes so every document met firm standards before delivery.</li>
-        <li>Used SQL and SaaS workflow tools for queue management and production reporting; completed intensive Microsoft Office training and built recognized mastery across Word, Excel, PowerPoint, and Outlook.</li>
-        <li>Maintained strict confidentiality on sensitive legal material at all times.</li>
-      </ul>
-      <div class="mini-skills"><span class="mini" data-skill="workflow">Workflow Coordination</span><span class="mini" data-skill="word">Microsoft Word</span><span class="mini" data-skill="docformat">Document Formatting</span><span class="mini" data-skill="proof">Proofreading</span><span class="mini" data-skill="saas">SaaS</span><span class="mini" data-skill="sql">SQL</span></div>
-    </div></div></div>
-  </article>
-
-  <article class="card job" data-skills="ops dataclean">
-    <button class="job-head" type="button" aria-expanded="false">
-      <span class="when">MAY 2021<br>DEC 2023</span>
-      <span class="what"><h3>Grower / Trimmer / Processor</h3><span class="org">Roden Farms</span> <span class="loc">&middot; Casselton, ND</span></span>
-      <span class="plus">+</span>
-    </button>
-    <div class="job-body"><div><div class="inner">
-      <p>Full-cycle cannabis cultivation and processing at a licensed operation, from pollination through harvest, extraction, and finished product (concurrent with Integreon).</p>
-      <ul>
-        <li>Selective pollination work to bioengineer and stabilize different species and strain profiles.</li>
-        <li>Ran THC and CBD extraction processes with strict lab safety, consistency, and quality control.</li>
-        <li>Trimming and processing to production standards, including grading and preparation for distribution.</li>
-        <li>Maintained legal compliance across cultivation and processing, including documentation and regulated handling.</li>
-      </ul>
-      <div class="mini-skills"><span class="mini" data-skill="ops">Operations</span><span class="mini" data-skill="dataclean">Data Cleaning</span></div>
-    </div></div></div>
-  </article>
-
-  <article class="card job" data-skills="audit support excel dataclean ops">
-    <button class="job-head" type="button" aria-expanded="false">
-      <span class="when">OCT 2019<br>MAR 2020</span>
-      <span class="what"><h3>Night Auditor</h3><span class="org">AmericInn Lodge &amp; Suites</span> <span class="loc">&middot; Wahpeton, ND</span></span>
-      <span class="plus">+</span>
-    </button>
-    <div class="job-body"><div><div class="inner">
-      <p>Sole overnight team member responsible for front desk operations, guest care, and the nightly audit.</p>
-      <ul>
-        <li>Ran the complete night audit: balanced and reconciled the day's revenue, verified rates and postings, prepared financial and occupancy reports.</li>
-        <li>Handled late check-ins, early departures, reservations, and guest requests with full responsibility for the property overnight.</li>
-        <li>Monitored the property for safety and security and resolved guest issues independently.</li>
-        <li>Processed cash and card payments with accurate cash drawer reconciliation.</li>
-      </ul>
-      <div class="mini-skills"><span class="mini" data-skill="audit">Night Audit</span><span class="mini" data-skill="support">Customer Support</span><span class="mini" data-skill="excel">Microsoft Excel</span></div>
-    </div></div></div>
-  </article>
-
-  <article class="card job" data-skills="events ops support">
-    <button class="job-head" type="button" aria-expanded="false">
-      <span class="when">MAR 2018<br>SEP 2019</span>
-      <span class="what"><h3>Distribution Manager &amp; Event Coordinator</h3><span class="org">Kosmic Kombucha</span> <span class="loc">&middot; Austin, TX</span></span>
-      <span class="plus">+</span>
-    </button>
-    <div class="job-body"><div><div class="inner">
-      <p>Managed product distribution and brand events for a craft kombucha brewery in the Austin market.</p>
-      <ul>
-        <li>Coordinated distribution logistics, delivery scheduling, and inventory flow to retail accounts.</li>
-        <li>Built and maintained relationships with retail and venue partners, resolving delivery and product issues quickly.</li>
-        <li>Planned and staffed brand events, tastings, and promotions end to end: product, equipment, staffing, setup.</li>
-      </ul>
-      <div class="mini-skills"><span class="mini" data-skill="events">Event Coordination</span><span class="mini" data-skill="ops">Operations</span><span class="mini" data-skill="support">Customer Support</span></div>
-    </div></div></div>
-  </article>
-
-  <article class="card job" data-skills="accounts saas sql support data ops">
-    <button class="job-head" type="button" aria-expanded="false">
-      <span class="when">SEP 2015<br>MAR 2018</span>
-      <span class="what"><h3>Account Manager</h3><span class="org">Luxe Valet</span> <span class="loc">&middot; Austin, TX</span></span>
-      <span class="plus">+</span>
-    </button>
-    <div class="job-body"><div><div class="inner">
-      <p>Managed client accounts for a valet parking services company, the primary point of contact between venue clients and operations teams.</p>
-      <ul>
-        <li>Oversaw a portfolio of client accounts: onboarding, service planning, staffing coordination, and relationship management.</li>
-        <li>Worked daily in the company's SaaS platform to manage accounts, schedules, and service data.</li>
-        <li>Used SQL to pull reports and answer operational questions; resolved escalations with a focus on retention.</li>
-        <li>Coordinated valet staffing and event coverage for high-volume venues and special events.</li>
-      </ul>
-      <div class="mini-skills"><span class="mini" data-skill="accounts">Account Management</span><span class="mini" data-skill="saas">SaaS</span><span class="mini" data-skill="sql">SQL</span><span class="mini" data-skill="data">Data Analysis</span><span class="mini" data-skill="support">Customer Support</span></div>
-    </div></div></div>
-  </article>
-
-  <article class="card job" data-skills="support ops">
-    <button class="job-head" type="button" aria-expanded="false">
-      <span class="when">AUG 2012<br>AUG 2015</span>
-      <span class="what"><h3>Lead Bartender &amp; Headwaiter</h3><span class="org">Gringo's Tex-Mex Kitchen and Cantina</span> <span class="loc">&middot; Texas City, TX</span></span>
-      <span class="plus">+</span>
-    </button>
-    <div class="job-body"><div><div class="inner">
-      <p>Dual leadership role in a high-volume restaurant: lead bartender running the bar program and headwaiter leading the dining room service team.</p>
-      <ul>
-        <li>Led bar operations during peak service with speed and consistency; trained and mentored new bartenders and servers.</li>
-        <li>As headwaiter, coordinated section assignments and set the standard for guest experience.</li>
-        <li>Handled cash, tabs, and closing reconciliation accurately; supported bar inventory counts and ordering.</li>
-        <li>Built a strong base of regular guests through attentive, personable service.</li>
-      </ul>
-      <div class="mini-skills"><span class="mini" data-skill="support">Customer Support</span><span class="mini" data-skill="ops">Operations</span></div>
-    </div></div></div>
-  </article>
+<!-- ================= PROJECTS ================= -->
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-head">
+      <svg class="burst" viewBox="0 0 100 100" aria-hidden="true"><g fill="#E5447C"><path d="M50 0 L56 38 L95 20 L62 46 L100 50 L62 54 L95 80 L56 62 L50 100 L44 62 L5 80 L38 54 L0 50 L38 46 L5 20 L44 38Z"/></g></svg>
+      <h2>Selected Projects</h2><div class="rule"></div>
+    </div>
+    <div class="sec-sub">Built, shipped, and in the world</div>
+    <div class="grid">
+      <article class="card" id="p1" style="--c:#E5447C" data-skills="design word pdf docs proof present branding">
+        <div class="sub">Publishing · Dude in the Desert Studios</div>
+        <h3>The Ultimate Tarot: Interactive Workbook</h3>
+        <p>A 158-page interactive guide and workbook, designed, typeset, and proofread end to end: full design system, populated table of contents, and production-ready files under the Your Guided Journey brand.</p>
+        <div class="tags"></div>
+      </article>
+      <article class="card" id="p2" style="--c:#0E7C6F" data-skills="data sql excel python present">
+        <div class="sub">Analytics · Merit America</div>
+        <h3>Data Analytics Casework</h3>
+        <p>End-to-end analysis projects for the Google Data Analytics Certification: cleaning and querying datasets with SQL, structured analysis in Excel, Python exploration, and findings presented for non-technical readers.</p>
+        <div class="tags"></div>
+      </article>
+      <article class="card" id="p3" style="--c:#F0A818" data-skills="web html css js design branding">
+        <div class="sub">Web · Dude in the Desert Studios</div>
+        <h3>Interactive One-Page Business Websites</h3>
+        <p>Hand-built, single-page business sites with a point of view: custom layout, typography, and interaction design in HTML, CSS, and JavaScript. This resume site is one of them, designed and coded in-house.</p>
+        <div class="tags"></div>
+      </article>
+      <article class="card" id="p4" style="--c:#1FB6A6" data-skills="python js web ops">
+        <div class="sub">Software · Dude in the Desert Studios</div>
+        <h3>Live-Stream Tip Bridge</h3>
+        <p>A working bridge between a live-streaming platform and connected devices: a local Python service listens for tip events and triggers device actions in real time, with a browser control panel for live shows.</p>
+        <div class="tags"></div>
+      </article>
+      <article class="card" id="p5" style="--c:#D95D27" data-skills="design branding">
+        <div class="sub">Art · Dude in the Desert Studios</div>
+        <h3>Original Paintings &amp; Commissions</h3>
+        <p>Original acrylic paintings (including a signature hexagonal series), digital graphics, and commissioned pieces sold through the studio. See the gallery below: every piece on that wall came out of this studio or its collection.</p>
+        <div class="tags"></div>
+      </article>
+      <article class="card" id="p6" style="--c:#B7D62E" data-skills="present word docs data excel ops branding design">
+        <div class="sub">Nonprofit · Founder</div>
+        <h3>The Ironwood Initiative</h3>
+        <p>Founder of a Palm Springs nonprofit in formation: transitional housing, recovery support, and workforce training for adult queer men. Wrote the full prospectus, program budget, and grant applications, and manage sponsor and funder outreach.</p>
+        <div class="tags"></div>
+      </article>
+    </div>
+  </div>
 </section>
 
-<section id="education" class="reveal">
-  <div class="sec-head"><h2>Education</h2><div class="rule"></div><svg class="burst" width="30" height="30" style="color:var(--coral)" aria-hidden="true"><use href="#starburst"/></svg></div>
-  <div class="edu">
-    <article class="card">
-      <h3>Merit America</h3>
-      <p class="meta">Google Data Analytics Certification &middot; In Progress</p>
-      <p>Professional certification program in data analytics: data cleaning, SQL, spreadsheets, and analysis communication. Expected November 2026.</p>
+<!-- ================= GALLERY ================= -->
+<div class="gallery-band" id="gallery">
+  <div class="wrap">
+    <div class="sec-head">
+      <svg class="burst" viewBox="0 0 100 100" aria-hidden="true"><g fill="#F0A818"><path d="M50 0 L56 38 L95 20 L62 46 L100 50 L62 54 L95 80 L56 62 L50 100 L44 62 L5 80 L38 54 L0 50 L38 46 L5 20 L44 38Z"/></g></svg>
+      <h2>The Gallery</h2><div class="rule"></div>
+    </div>
+    <div class="sec-sub">Original paintings &amp; studio pieces · Dude in the Desert Studios</div>
+    <div class="gal">
+      <figure class="tall"><img src="img/art-pyramid.jpg" alt="Pyramid of eyes radiating rainbow light over a desert canyon, with a sphinx dog"><figcaption>Pyramid of Eyes · Original, signed ’26</figcaption></figure>
+      <figure><img src="img/art-crystal.jpg" alt="Purple crystal descending over a desert river beneath an eclipse"><figcaption>Eclipse Crystal · Hexagonal acrylic</figcaption></figure>
+      <figure><img src="img/art-eye.jpg" alt="Stone pyramid with a great eye beneath a ringed planet"><figcaption>The Watching Pyramid · Hexagonal acrylic</figcaption></figure>
+      <figure class="wide"><img src="img/art-ufo.jpg" alt="Crashed flying saucer in a desert canyon watched by a black dog"><figcaption>Crash Site · Hexagonal acrylic</figcaption></figure>
+      <figure class="wide"><img src="img/art-sf.jpg" alt="Vintage mid-century painting of the San Francisco Bay Bridge and a cable car at night"><figcaption>San Francisco Nocturne · From the studio wall</figcaption></figure>
+      <figure><img src="img/art-aerial.jpg" alt="Aerial view of twin turquoise pools with magenta loungers"><figcaption>Two Pools · Palm Springs series</figcaption></figure>
+      <figure><img src="img/art-split.jpg" alt="Palms rising between chartreuse daylight and magenta desert night"><figcaption>Day / Night Palms · Palm Springs series</figcaption></figure>
+    </div>
+  </div>
+</div>
+
+<!-- ================= EXPERIENCE ================= -->
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head">
+      <svg class="burst" viewBox="0 0 100 100" aria-hidden="true"><g fill="#0E7C6F"><path d="M50 0 L56 38 L95 20 L62 46 L100 50 L62 54 L95 80 L56 62 L50 100 L44 62 L5 80 L38 54 L0 50 L38 46 L5 20 L44 38Z"/></g></svg>
+      <h2>Work History</h2><div class="rule"></div>
+    </div>
+    <div class="sec-sub">Tap any position to unfold the details</div>
+
+    <article class="job" id="j1" style="--c:#F0A818" data-skills="python sql saas data excel word docs pdf proof web html css js design branding present ops customer">
+      <button class="job-head" type="button"><span class="jt"><h3>Founder &amp; Owner</h3><span class="org">Dude in the Desert Studios LLC · Palm Springs, CA</span></span><span class="meta">Jan 2024 — Present</span><span class="plus">+</span></button>
+      <div class="job-body"><div class="job-body-in">
+        <p>Run a creative technology studio end to end: art sales and commissions, website design, graphic design, app development, coding, and AI scripting. Every job in the building is mine, from client intake and quoting to production, delivery, and follow-up, and every system behind it is one I chose, learned, and maintain myself.</p>
+        <p>Recent builds include a 158-page interactive book produced to print standard, hand-coded interactive websites in HTML, CSS, and JavaScript, and a live Python service that bridges a streaming platform to connected devices in real time. Day to day the work runs on SQL queries, SaaS tooling, spreadsheets, and document production, the same toolkit I bring to operations and support roles.</p>
+        <div class="tags"></div>
+      </div></div>
     </article>
-    <article class="card">
-      <h3>University of Arkansas at Little Rock</h3>
-      <p class="meta">Coursework &middot; Mechanical Systems Engineering</p>
-      <p>Undergraduate coursework in mechanical systems engineering. The systems thinking still shows up in every workflow he builds.</p>
+
+    <article class="job" id="j2" style="--c:#E5447C" data-skills="ops customer branding design web saas present">
+      <button class="job-head" type="button"><span class="jt"><h3>Owner &amp; Practitioner</h3><span class="org">Tactus Vitae · Palm Springs, CA</span></span><span class="meta">Jan 2024 — Present</span><span class="plus">+</span></button>
+      <div class="job-body"><div class="job-body-in">
+        <p>Independent wellness practice offering on-site massage therapy, guided meditation, and yoga. I handle the whole operation: scheduling and client communication, session delivery, presentation and branding, and the online booking and web presence that keep the calendar full. Repeat clients are the business model, so service quality and follow-through are everything.</p>
+        <div class="tags"></div>
+      </div></div>
+    </article>
+
+    <article class="job" id="j3" style="--c:#0E7C6F" data-skills="word excel docs proof pdf sql saas data ops customer">
+      <button class="job-head" type="button"><span class="jt"><h3>Workflow Coordinator / Legal Document Specialist</h3><span class="org">Integreon Managed Solutions · Fargo, ND</span></span><span class="meta">Mar 2020 — Dec 2023</span><span class="plus">+</span></button>
+      <div class="job-body"><div class="job-body-in">
+        <p>Coordinated legal document production for a national Am Law 100 firm (client name confidential per contract) as the operational hub of a high-volume workflow: intake and triage of requests, assignment to specialists, deadline tracking, quality control, and final delivery. When volume spiked or a deadline slipped, the queue came to me.</p>
+        <p>Received intensive Microsoft Suite training and worked to mastery in Word, Excel, and Outlook: complex document formatting, styles, tables of contents and authorities, redlines, and PDF production at law-firm standard. The role ran on SaaS workflow platforms and internal databases, with SQL-driven lookups and data checks woven into daily quality control, and constant, professional client-facing communication throughout.</p>
+        <div class="tags"></div>
+      </div></div>
+    </article>
+
+    <article class="job" id="j4" style="--c:#B7D62E" data-skills="ops data excel extraction">
+      <button class="job-head" type="button"><span class="jt"><h3>Grower, Trimmer &amp; Processor</h3><span class="org">Roden Farms · Casselton, ND</span></span><span class="meta">May 2021 — Dec 2023 · Concurrent</span><span class="plus">+</span></button>
+      <div class="job-body"><div class="job-body-in">
+        <p>Hands-on cannabis production from cultivation to finished product: growing, trimming, and processing, including THC and CBD extraction and pollination work to bioengineer different species. Operations ran on tracked data: yields, batch records, and inventory logged and reconciled in spreadsheets, inside a legal compliance framework where documentation errors have real consequences.</p>
+        <div class="tags"></div>
+      </div></div>
+    </article>
+
+    <article class="job" id="j5" style="--c:#1FB6A6" data-skills="ops customer excel data saas nightaudit frontdesk">
+      <button class="job-head" type="button"><span class="jt"><h3>Night Auditor</h3><span class="org">AmericInn Lodge &amp; Suites · Wahpeton, ND</span></span><span class="meta">Oct 2019 — Mar 2020</span><span class="plus">+</span></button>
+      <div class="job-body"><div class="job-body-in">
+        <p>Sole overnight operator of the hotel: front desk, guest services, security walks, and the nightly audit. Balanced the day's books, reconciled charges and payments in the property system, ran occupancy and revenue reports, and closed out discrepancies before the morning team arrived. Guests at 3 AM get the same patience as guests at 3 PM; that is the job.</p>
+        <div class="tags"></div>
+      </div></div>
+    </article>
+
+    <article class="job" id="j6" style="--c:#D95D27" data-skills="ops customer excel data saas design present events distribution">
+      <button class="job-head" type="button"><span class="jt"><h3>Distribution Manager &amp; Event Coordinator</h3><span class="org">Kosmic Kombucha · Austin, TX</span></span><span class="meta">Mar 2018 — Sep 2019</span><span class="plus">+</span></button>
+      <div class="job-body"><div class="job-body-in">
+        <p>Ran distribution for a growing beverage brand: routing, inventory, and account orders tracked through ordering platforms and spreadsheets, with delivery problems solved before accounts ever felt them. In parallel, coordinated brand events end to end: planning, staffing, presentation materials, and on-site execution, representing the brand to retailers and the public.</p>
+        <div class="tags"></div>
+      </div></div>
+    </article>
+
+    <article class="job" id="j7" style="--c:#14313A" data-skills="saas sql data excel customer ops present">
+      <button class="job-head" type="button"><span class="jt"><h3>Account Manager</h3><span class="org">Luxe Valet · Austin, TX</span></span><span class="meta">Sep 2015 — Mar 2018</span><span class="plus">+</span></button>
+      <div class="job-body"><div class="job-body-in">
+        <p>Account Manager for a valet parking services company, serving as the primary point of contact between venue clients and operations teams. Owned a book of client accounts end to end: onboarding, scheduling, service quality, issue resolution, and retention. The operation ran on a SaaS platform, and my days lived in its data: account records, SQL-based reporting, billing checks, and performance reviews presented back to clients and leadership.</p>
+        <div class="tags"></div>
+      </div></div>
+    </article>
+
+    <article class="job" id="j8" style="--c:#E5447C" data-skills="customer ops bartend">
+      <button class="job-head" type="button"><span class="jt"><h3>Lead Bartender &amp; Headwaiter</h3><span class="org">Gringo's Tex-Mex Kitchen and Cantina · Texas City, TX</span></span><span class="meta">Aug 2012 — Aug 2015</span><span class="plus">+</span></button>
+      <div class="job-body"><div class="job-body-in">
+        <p>Dual leadership role in a high-volume restaurant: lead bartender running the bar program and headwaiter leading the dining room service team, at the same time, on the same shifts. Trained and directed service staff, handled cash and close-out, resolved guest issues on the floor, and kept a packed house moving without ever letting it feel rushed.</p>
+        <div class="tags"></div>
+      </div></div>
     </article>
   </div>
 </section>
 
-</main>
+<!-- ================= EDUCATION ================= -->
+<section id="education">
+  <div class="wrap">
+    <div class="sec-head">
+      <svg class="burst" viewBox="0 0 100 100" aria-hidden="true"><g fill="#D9A441"><path d="M50 0 L56 38 L95 20 L62 46 L100 50 L62 54 L95 80 L56 62 L50 100 L44 62 L5 80 L38 54 L0 50 L38 46 L5 20 L44 38Z"/></g></svg>
+      <h2>Education</h2><div class="rule"></div>
+    </div>
+    <div class="edu">
+      <article class="card" style="--c:#F0A818">
+        <div class="sub">Merit America · In Progress</div>
+        <h3>Google Data Analytics Certification</h3>
+        <p>Career-track program in data analytics: data cleaning, SQL, spreadsheet analysis, and presenting findings. Expected completion November 2026.</p>
+      </article>
+      <article class="card" style="--c:#0E7C6F">
+        <div class="sub">University of Arkansas at Little Rock</div>
+        <h3>Mechanical Systems Engineering, Coursework</h3>
+        <p>Undergraduate coursework in mechanical systems engineering: the analytical foundation behind a lifelong habit of taking systems apart to see how they run.</p>
+      </article>
+    </div>
+  </div>
+</section>
 
+<!-- ================= FOOTER ================= -->
 <footer>
-  <svg class="burst" width="40" height="40" style="color:var(--mustard)" aria-hidden="true"><use href="#starburst"/></svg>
-  <p class="big">DUDE BARTLETT</p>
-  <p>Palm Springs, California &middot; <a href="mailto:dude.bartlett.g@gmail.com">dude.bartlett.g@gmail.com</a> &middot; <a href="tel:+16193695432">(619) 369-5432</a></p>
-  <p><a href="https://www.linkedin.com/in/dude-bartlett/" target="_blank" rel="noopener">LinkedIn</a> &middot; <a href="https://www.upwork.com/freelancers/dudeb3" target="_blank" rel="noopener">Upwork</a> &middot; <a href="print.html">(Print Copy of Resume here)</a></p>
-  <p style="margin-top:14px;font-size:.82rem;opacity:.65">Designed in the atomic spirit of Palm Springs. Built by Dude in the Desert Studios.</p>
+  <img class="foot-art" src="img/art-aerial.jpg" alt="Aerial view of turquoise pools and palms">
+  <div class="foot-band">
+    <div class="wrap">
+      <div class="big">Let’s build the next thing.</div>
+      <p style="margin-top:10px">Dude Bartlett · Palm Springs, California · <a href="mailto:dude.bartlett.g@gmail.com">dude.bartlett.g@gmail.com</a> · (619) 369-5432</p>
+      <p style="margin-top:8px"><a href="https://www.linkedin.com/in/dude-bartlett/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/dudebartlett" target="_blank" rel="noopener">GitHub</a> · <a href="print.html">(Print Copy of Resume here)</a> · dudebartlett.github.io</p>
+    </div>
+  </div>
 </footer>
 
 <script>
-// Reveal on scroll
-const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold:.08});
-document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+const SKILLS = {
+  python:"Python", sql:"SQL", saas:"SaaS Platforms", data:"Data Analysis", excel:"Microsoft Excel",
+  word:"Microsoft Word", docs:"Document Production", pdf:"PDF Workflows", proof:"Proofreading & QA",
+  web:"Web Design", html:"HTML", css:"CSS", js:"JavaScript", design:"Graphic Design",
+  branding:"Branding", present:"Presentations", ops:"Operations", customer:"Customer Service",
+  nightaudit:"Night Audit", frontdesk:"Front Desk", bartend:"Bartending",
+  events:"Event Coordination", distribution:"Distribution & Logistics",
+  extraction:"Extraction & Compliance", wellness:"Wellness Services"
+};
+/* Wellness tag lives on Tactus only; keep mapping honest if chip used */
+const cards = [...document.querySelectorAll('[data-skills]')];
+const skillRow = document.getElementById('skillRow');
+const svg = document.getElementById('wires');
+const filterbar = document.getElementById('filterbar');
+let active = null, wiredChip = null;
 
-// Expandable jobs
-document.querySelectorAll('.job-head').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const job = btn.closest('.job');
-    const open = job.classList.toggle('open');
-    btn.setAttribute('aria-expanded', open);
+/* Build chips */
+Object.entries(SKILLS).forEach(([key,label])=>{
+  const b=document.createElement('button');
+  b.className='skill'; b.type='button'; b.dataset.skill=key; b.textContent=label;
+  b.addEventListener('click',()=>{ active===key ? clearFilter() : setFilter(key,b); });
+  skillRow.appendChild(b);
+});
+/* Tactus carries the wellness skill */
+document.getElementById('j2').dataset.skills += ' wellness';
+/* Build card tags */
+cards.forEach(c=>{
+  const box=c.querySelector('.tags'); if(!box) return;
+  c.dataset.skills.trim().split(/\s+/).forEach(k=>{
+    if(!SKILLS[k]) return;
+    const s=document.createElement('span'); s.className='tag'; s.textContent=SKILLS[k];
+    s.addEventListener('click',ev=>{ ev.stopPropagation();
+      const chip=skillRow.querySelector('[data-skill="'+k+'"]');
+      active===k ? clearFilter() : setFilter(k,chip,true); });
+    box.appendChild(s);
   });
 });
-
-// Skill filtering: skills light up the projects and positions that prove them
-const chips = document.querySelectorAll('.chip');
-const minis = document.querySelectorAll('.mini');
-const cards = document.querySelectorAll('[data-skills]');
-const bar = document.getElementById('filterbar');
-const ftext = document.getElementById('filtertext');
-let activeSkill = null;
-
-function skillName(key){
-  const c = document.querySelector('.chip[data-skill="' + key + '"]');
-  return c ? c.textContent.trim() : key;
-}
-function applyFilter(key){
-  activeSkill = key;
-  chips.forEach(c => c.classList.toggle('active', c.dataset.skill === key));
-  let projects = 0, jobs = 0;
-  cards.forEach(card => {
-    const has = card.dataset.skills.split(' ').includes(key);
-    card.classList.toggle('match', has);
-    card.classList.toggle('dim', !has);
-    if (has) { if (card.classList.contains('job')) { jobs++; card.classList.add('open'); card.querySelector('.job-head').setAttribute('aria-expanded','true'); } else { projects++; } }
+/* Job accordion */
+document.querySelectorAll('.job').forEach(job=>{
+  const head=job.querySelector('.job-head'), body=job.querySelector('.job-body');
+  head.addEventListener('click',()=>{
+    const open=job.classList.toggle('open');
+    body.style.maxHeight = open ? body.scrollHeight+'px' : '0px';
+    if(active) requestAnimationFrame(()=>drawWires(false));
   });
-  ftext.innerHTML = '<strong>' + skillName(key) + '</strong> shows up in ' + projects + ' project' + (projects === 1 ? '' : 's') + ' and ' + jobs + ' position' + (jobs === 1 ? '' : 's') + '. Everything else is dimmed.';
-  bar.classList.add('show');
-  bar.scrollIntoView({behavior:'smooth', block:'nearest'});
+});
+function docRect(el){ const r=el.getBoundingClientRect();
+  return {x:r.left+window.scrollX, y:r.top+window.scrollY, w:r.width, h:r.height}; }
+function sizeSvg(){ const w=document.documentElement.scrollWidth, h=document.documentElement.scrollHeight;
+  svg.setAttribute('width',w); svg.setAttribute('height',h); svg.setAttribute('viewBox','0 0 '+w+' '+h); }
+
+function drawWires(animate){
+  sizeSvg();
+  [...svg.querySelectorAll('path,circle.spark,g.nodeG')].forEach(n=>n.remove());
+  if(!active || !wiredChip) return;
+  const targets = cards.filter(c=>c.classList.contains('lit'));
+  const a = docRect(wiredChip);
+  const sx = a.x + a.w/2, sy = a.y + a.h;
+  targets.forEach((t,i)=>{
+    const b = docRect(t);
+    const ex = b.x + Math.min(b.w*0.5, 260), ey = b.y;
+    const sag = Math.max(60, Math.abs(ey-sy)*0.42);
+    const d = 'M '+sx+' '+sy+' C '+sx+' '+(sy+sag)+', '+ex+' '+(ey-sag)+', '+ex+' '+ey;
+    const p = document.createElementNS('http://www.w3.org/2000/svg','path');
+    p.setAttribute('d',d); p.setAttribute('stroke','url(#wireGrad)');
+    p.id='wp'+i; svg.appendChild(p);
+    const g = document.createElementNS('http://www.w3.org/2000/svg','g'); g.setAttribute('class','nodeG');
+    const node=document.createElementNS('http://www.w3.org/2000/svg','circle');
+    node.setAttribute('cx',ex); node.setAttribute('cy',ey); node.setAttribute('r',6); node.setAttribute('class','node');
+    g.appendChild(node); svg.appendChild(g);
+    const len = p.getTotalLength();
+    if(animate){
+      p.style.strokeDasharray=len; p.style.strokeDashoffset=len;
+      p.getBoundingClientRect();
+      p.style.transition='stroke-dashoffset .7s ease '+(i*0.13)+'s';
+      p.style.strokeDashoffset='0';
+      const spark=document.createElementNS('http://www.w3.org/2000/svg','circle');
+      spark.setAttribute('r',5); spark.setAttribute('class','spark'); spark.setAttribute('fill','#F0A818');
+      spark.style.filter='drop-shadow(0 0 6px rgba(240,168,24,1))';
+      const am=document.createElementNS('http://www.w3.org/2000/svg','animateMotion');
+      am.setAttribute('dur','1.5s'); am.setAttribute('begin',(0.7+i*0.13)+'s'); am.setAttribute('repeatCount','indefinite');
+      const mp=document.createElementNS('http://www.w3.org/2000/svg','mpath');
+      mp.setAttribute('href','#wp'+i); am.appendChild(mp); spark.appendChild(am);
+      svg.appendChild(spark);
+    }
+  });
+}
+function setFilter(key, chip, scroll){
+  active=key; wiredChip=chip||null;
+  document.body.classList.add('filtering');
+  skillRow.querySelectorAll('.skill').forEach(s=>s.classList.toggle('active', s.dataset.skill===key));
+  let np=0, nj=0;
+  cards.forEach(c=>{
+    const hit = c.dataset.skills.trim().split(/\s+/).includes(key);
+    c.classList.toggle('lit', hit);
+    if(hit){ if(c.id[0]==='p') np++; else nj++;
+      if(c.classList.contains('job') && !c.classList.contains('open')){
+        c.classList.add('open');
+        const b=c.querySelector('.job-body'); b.style.maxHeight=b.scrollHeight+'px';
+      }
+    }
+  });
+  document.getElementById('fname').textContent = SKILLS[key];
+  document.getElementById('fcount').textContent = 'lights up '+np+' project'+(np===1?'':'s')+' and '+nj+' position'+(nj===1?'':'s')+' below. Follow the wires.';
+  filterbar.classList.add('show');
+  setTimeout(()=>drawWires(true), 60);
+  if(scroll && wiredChip) wiredChip.scrollIntoView({behavior:'smooth', block:'center'});
 }
 function clearFilter(){
-  activeSkill = null;
-  chips.forEach(c => c.classList.remove('active'));
-  cards.forEach(card => card.classList.remove('match','dim'));
-  bar.classList.remove('show');
+  active=null; wiredChip=null;
+  document.body.classList.remove('filtering');
+  skillRow.querySelectorAll('.skill').forEach(s=>s.classList.remove('active'));
+  cards.forEach(c=>c.classList.remove('lit'));
+  filterbar.classList.remove('show');
+  drawWires(false);
 }
-chips.forEach(c => c.addEventListener('click', () => { (activeSkill === c.dataset.skill) ? clearFilter() : applyFilter(c.dataset.skill); }));
-minis.forEach(m => m.addEventListener('click', () => { applyFilter(m.dataset.skill); document.getElementById('skills').scrollIntoView({behavior:'smooth'}); }));
-document.getElementById('clearfilter').addEventListener('click', clearFilter);
+document.getElementById('clearBtn').addEventListener('click', clearFilter);
+let rT; window.addEventListener('resize', ()=>{ clearTimeout(rT); rT=setTimeout(()=>drawWires(false),150); });
+let sT; window.addEventListener('scroll', ()=>{ if(!active) return; clearTimeout(sT); sT=setTimeout(()=>drawWires(false),90); }, {passive:true});
+window.addEventListener('load', ()=>sizeSvg());
+sizeSvg();
 </script>
 </body>
 </html>
