@@ -20,7 +20,7 @@ body{font-family:'Jost',sans-serif;color:var(--ink);background:var(--deep)}
 .screenbar button:hover{background:var(--pink);color:#fff}
 .screenbar a{color:var(--turq);margin-left:16px;font-size:.95rem}
 .sheet{
-  width:8.5in;height:10.5in;margin:14px auto 26px;padding:.20in .44in .14in;position:relative;overflow:hidden;
+  width:8.5in;height:11in;margin:14px auto 26px;padding:.22in .44in .22in;position:relative;overflow:hidden;display:flex;flex-direction:column;
   background-color:var(--cream);
   background-image:linear-gradient(rgba(250,240,218,.865),rgba(250,240,218,.925)),url(img/art-split.jpg);
   background-size:cover;background-position:center 38%;
@@ -59,7 +59,7 @@ p,li{font-size:7.9pt;line-height:1.22}
 .edu .role{font-weight:700;color:var(--navy);font-size:9.3pt}
 .edu p{color:var(--soft)}
 /* ---------- FOOTER ---------- */
-.foot{margin-top:5px;border-top:3.5px solid var(--mustard);padding-top:7px;display:flex;justify-content:space-between;align-items:center;gap:18px}
+.foot{margin-top:auto;border-top:3.5px solid var(--mustard);padding-top:7px;display:flex;justify-content:space-between;align-items:center;gap:18px}
 .foot .big{font-family:'Limelight',cursive;font-size:11.5pt;color:var(--navy)}
 .foot .url{font-weight:700;color:var(--teal);font-size:9.6pt}
 .foot p{color:var(--soft);font-size:8.6pt;max-width:5.6in}
@@ -68,9 +68,9 @@ p,li{font-size:7.9pt;line-height:1.22}
 .qrbox .cap{font-family:'Marcellus',serif;font-size:6.8pt;letter-spacing:.14em;text-transform:uppercase;color:var(--navy);margin-top:3px}
 @page{size:letter;margin:0}
 @media print{
-  body{background:#fff}
+  html,body{margin:0;padding:0;background:#fff}
   .screenbar{display:none}
-  .sheet{margin:.25in auto 0;box-shadow:none}
+  .sheet{margin:0;box-shadow:none;width:8.5in;height:11in}
 }
 </style>
 </head>
@@ -78,6 +78,7 @@ p,li{font-size:7.9pt;line-height:1.22}
 <div class="screenbar">
   <button onclick="window.print()">Print this resume</button>
   <a href="index.html">&larr; Back to the interactive resume</a>
+  <p style="color:#F1DFBB;font-size:.85rem;margin-top:8px">For a clean print: set Margins to None, Scale to 100%, and turn Background graphics on.</p>
 </div>
 
 <div class="sheet">
