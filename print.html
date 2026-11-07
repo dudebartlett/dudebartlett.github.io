@@ -24,7 +24,7 @@ body{font-family:'Jost',sans-serif;color:var(--ink);background:var(--deep)}
   background-color:var(--cream);
   background-image:linear-gradient(rgba(250,240,218,.865),rgba(250,240,218,.925)),url(img/art-split.jpg);
   background-size:cover;background-position:center 38%;
-  box-shadow:0 14px 44px rgba(0,0,0,.5);
+  box-shadow:0 14px 44px rgba(11,43,51,.5);
   -webkit-print-color-adjust:exact;print-color-adjust:exact;
 }
 /* ---------- HEADER BAND ---------- */
@@ -44,7 +44,9 @@ h1{font-family:'Limelight',cursive;font-weight:400;font-size:26pt;line-height:1.
 p,li{font-size:7.9pt;line-height:1.22}
 .summary{color:var(--soft)}
 .skills{font-size:7.9pt;line-height:1.26}
-.skills b{color:var(--teal)}
+.skillrow{display:flex;gap:6px}
+.skillrow .cat{flex:0 0 1.24in;font-weight:700;color:var(--teal);white-space:nowrap}
+.skillrow .items{flex:1}
 /* ---------- JOBS ---------- */
 .job{margin-bottom:2px}
 .job .top{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
@@ -97,15 +99,17 @@ p,li{font-size:7.9pt;line-height:1.22}
 
   <!-- ================= SKILLS ================= -->
   <div class="sec"><svg class="burst" viewBox="0 0 100 100" aria-hidden="true"><g fill="#B7D62E"><path d="M50 0 L56 38 L95 20 L62 46 L100 50 L62 54 L95 80 L56 62 L50 100 L44 62 L5 80 L38 54 L0 50 L38 46 L5 20 L44 38Z"/></g></svg><h2>Core Skills</h2><div class="rule"></div></div>
-  <p class="skills"><b>Documents &amp; Data:</b> Microsoft Word · Excel · PowerPoint · Outlook · Document Formatting · Proofreading &amp; QA · PDF Workflows · SQL · Data Analysis &amp; Cleaning · Presentation Design<br>
-  <b>Technology:</b> Python · SaaS Platforms · HTML · CSS · JavaScript · Web Design · IoT Integration · Digital Publishing · Branding &amp; Graphic Design<br>
-  <b>Operations:</b> Workflow Coordination · Operations Management · SaaS Account Management · Customer Support · Night Audit · Front Desk · Event Coordination · Distribution &amp; Logistics</p>
+  <div class="skills">
+  <div class="skillrow"><span class="cat">Documents &amp; Data:</span><span class="items">Microsoft Word · Excel · PowerPoint · Outlook · Document Formatting · Proofreading &amp; QA · PDF Workflows · SQL · Data Analysis &amp; Cleaning · Presentation Design</span></div>
+  <div class="skillrow"><span class="cat">Technology:</span><span class="items">Python · SaaS Platforms · HTML · CSS · JavaScript · Web Design · IoT Integration · Digital Publishing · Branding &amp; Graphic Design</span></div>
+  <div class="skillrow"><span class="cat">Operations:</span><span class="items">Workflow Coordination · Operations Management · SaaS Account Management · Customer Support · Night Audit · Front Desk · Event Coordination · Distribution &amp; Logistics</span></div>
+  </div>
 
   <!-- ================= EXPERIENCE ================= -->
   <div class="sec"><svg class="burst" viewBox="0 0 100 100" aria-hidden="true"><g fill="#C22A5E"><path d="M50 0 L56 38 L95 20 L62 46 L100 50 L62 54 L95 80 L56 62 L50 100 L44 62 L5 80 L38 54 L0 50 L38 46 L5 20 L44 38Z"/></g></svg><h2>Experience</h2><div class="rule"></div></div>
 
   <div class="job" style="--oc:#B97F0E"><div class="top"><span><span class="role">Founder &amp; Owner</span>, <span class="org">Dude in the Desert Studios LLC</span> · Palm Springs, CA</span><span class="when">Jan 2024 — Present</span></div>
-  <p>Creative technology studio run end to end: art sales and commissions, website design, graphic design, app development, coding, and AI scripting. Recent builds include a 159-page interactive book produced to print standard, hand-coded interactive websites, and a live Python service bridging a streaming platform to connected devices.</p></div>
+  <p>Creative studio run end to end, and only partly technology: original works of art in painting, mixed media, watercolor, and pen and ink, with art sales and commissions, plus website design, graphic design, app development, coding, and AI scripting. Recent work includes a 159-page interactive book produced to print standard and a live Python service bridging a streaming platform to connected devices.</p></div>
 
   <div class="job" style="--oc:#C22A5E"><div class="top"><span><span class="role">Owner &amp; Practitioner</span>, <span class="org">Tactus Vitae</span> · Palm Springs, CA</span><span class="when">Jan 2024 — Present</span></div>
   <p>Independent wellness practice: on-site massage therapy, guided meditation, and yoga. Scheduling, client communication, booking, and web presence all run in-house; repeat clients are the business model, so service quality and follow-through are everything.</p></div>
@@ -122,7 +126,7 @@ p,li{font-size:7.9pt;line-height:1.22}
   <div class="job" style="--oc:#C24E1F"><div class="top"><span><span class="role">Distribution Manager &amp; Event Coordinator</span>, <span class="org">Kosmic Kombucha</span> · Austin, TX</span><span class="when">Mar 2018 — Sep 2019</span></div>
   <p>Ran distribution for a growing beverage brand: routing, inventory, and account orders tracked through ordering platforms and spreadsheets. Coordinated brand events end to end, from planning and staffing to on-site execution.</p></div>
 
-  <div class="job" style="--oc:#14313A"><div class="top"><span><span class="role">Account Manager</span>, <span class="org">Luxe Valet</span> · Austin, TX</span><span class="when">Sep 2015 — Mar 2018</span></div>
+  <div class="job" style="--oc:#B97F0E"><div class="top"><span><span class="role">Account Manager</span>, <span class="org">Luxe Valet</span> · Austin, TX</span><span class="when">Sep 2015 — Mar 2018</span></div>
   <p>Primary point of contact between venue clients and operations teams for a SaaS-based valet services company. Owned a book of accounts end to end: onboarding, scheduling, service quality, issue resolution, and retention, with SQL-based reporting and billing checks.</p></div>
 
   <div class="job" style="--oc:#C22A5E"><div class="top"><span><span class="role">Lead Bartender &amp; Headwaiter</span>, <span class="org">Gringo's Tex-Mex Kitchen and Cantina</span> · Texas City, TX</span><span class="when">Aug 2012 — Aug 2015</span></div>
